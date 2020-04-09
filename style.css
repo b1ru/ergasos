@@ -5,19 +5,7 @@ html {
 	background-color : #000f08;
 }
 
-#register-button {
-	background-color : #28a745;
-	border: 0;
-	border-radius: 8px;
-	padding: 6px 12px;
-	margin: 7px;
-}
-
-#sign-in-button {
-	color : #4CAF50;
+#sign-in-btn {
 	background-color: #343a40;
-	border-radius: 8px;
-	padding: 6px 12px;
-	margin: 7px;
-	border: 1px solid #4CAF50; 
+	margin-left: 7px;
 }
