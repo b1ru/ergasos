@@ -14,3 +14,8 @@ h2{
 h3{
   font-size: 23px;
 }
+
+#sign-in-btn {
+		background-color: #343a40;
+			margin-left: 7px;
+}
