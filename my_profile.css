@@ -1,0 +1,26 @@
+#edit_link{
+  font-size: 20px;
+  text-align: right;
+}
+
+h1{
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+}
+
+h4{
+  color: rgb(71, 179, 213)
+}
+
+
+#CV{
+ font-size: 18px;
+}
+
+.left{
+  float:left;
+}
+
+.right{
+  float:right;
+}
