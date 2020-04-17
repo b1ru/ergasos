@@ -4,7 +4,7 @@
 }
 
 h1{
-  color: rgb(0, 0, 0);
+  color: rgba(0, 0, 0, 0.8);
   font-size: 35px;
 }
 
@@ -23,4 +23,9 @@ h4{
 
 .right{
   float:right;
+}
+
+.title{
+  color: rgb(97, 97, 97);
+  padding-right: 5px;
 }
