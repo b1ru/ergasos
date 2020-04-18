@@ -43,24 +43,30 @@
     <div class="jumbotron">
       <div>
         <h1> <b> My Profile </b> </h1>
-        <p id = edit_link> <i class="fa fa-pencil"></i> <a href ="/" id="edit_link"> Edit </a> </p>
+        <p id = edit_par> <i class="fa fa-pencil" id="pen_icon"></i> <button type="button" class = "btn btn-primary" onclick="edit_pressed()" id = edit_link> Edit </button> <button type="button" class = "btn btn-success" onclick="save_pressed()" id = save_link> Save changes </button> </p>
       </div>
       <div>
         <h4> <b> <u> Personal Info: </u> </b> </h4>
-        <p> <span class = "title"> Full Name: </span> Αχιλλέας Τούμπας </p>
-        <p> <span class = "title"> Address: </span> Μαντινείας 81 </p>
+        <p> <span class = "title"> Full Name: </span>
+					 	<span class = "desc"> Αχιλλέας Τούμπας </span> </p>
+        <p> <span class = "title"> Address: </span>
+					 	<span class = "desc"> Μαντινείας 81 </span> </p>
       </div>
       <hr>
       <div>
         <h4> <b> <u> Contact Info: </u> </b> </h4>
-        <p> <span class = "title"> Email: </span> atoumpas@csd.auth.gr </p>
-        <p> <span class = "title"> Phone Number: </span> 6940880123 </p>
+        <p> <span class = "title"> Email: </span>
+					 	<span class = "desc"> atoumpas@csd.auth.gr </span> </p>
+        <p> <span class = "title"> Phone Number: </span>
+					 	<span class = "desc"> 6940880123 </span> </p>
         </div>
         <hr>
         <div>
-          <p id = CV> <span class = "left"> <a href="./CV.pdf">Download CV</a> </span> <span class ="right"> <i class="fa fa-upload"></i> <a href="./"> Upload your CV </a> </span> </p>
+          <p id = CV> <span class = "left"> <a href="./CV.pdf">Download CV</a> </span> <span class ="right"> <i class="fa fa-upload"></i> <button type="button" class = "btn btn-primary" onclick="upload_pressed()"> Upload your CV </button> <input type="file" id="uploadfile"> </span> </p>
         </div>
     </div>
 
+		<!-- Javascript -->
+		<script type="text/javascript" src="my_profile.js"></script>
   </body>
 </html>
