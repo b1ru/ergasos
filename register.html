@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register-ΕργαSOS</title>
+	<link rel="stylesheet" type="text/css" href="css/rstyle.css">
+</head>
+<body>
+	<div class="box-1">
+		<div>
+			<h2 id="mainHeader">Register</h2>
+		</div>
+		<form action="proccess.php" method="POST">
+		<div class="container">
+			<div class="p">
+				<label>First Name:</label>
+				<input class="form" type="text" name="firstName" placeholder="Enter first name">
+				</div>
+					
+				<div class="p">
+					<label>Last Name:</label>
+					<input class="form" type="text" name="lastName" placeholder="Enter last name">
+				</div>
+					
+				<div class="p">
+					<label>Email:</label>
+					<input class="form" type="Email" name="email" placeholder="Enter email">
+				</div>
+
+				<div class="p">
+					<label>Username:</label>
+					<input class="form" type="text" name="userName" placeholder="Enter username">
+				</div>
+					
+				<div class="p">
+					<label>Password:</label>
+					<input class="form" type="password" name="password" placeholder="Enter password">
+				</div>
+
+				<div class="p">
+					<label>Gender</label>
+					<select class="form" name="gender">
+						<option value="male">Male</option>>
+						<option value="female">Female</option>>
+						<option value="other">Other</option>>
+					</select>
+				</div>
+					
+				<div class="p">
+					<label>Date of Birth:</label>
+					<input class="form" type="date" name="birthday">
+				</div>
+
+		</div>
+		<div>
+			<input class="button" type="submit" name="submit" value="Register">
+		</div>
+		</form>
+	</div>
+	<div id="signin">
+		<a href="../bakalh/signin.html">Sign In</a>
+	</div>
+
+	<footer id="mainFooter">
+		<p>Copyright &copy; 2020, ΕργαSOS</p>
+	</footer>
+	
+</body>
+</html>
