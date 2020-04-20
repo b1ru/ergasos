@@ -44,4 +44,15 @@ $('#savebtn').on('click', function () {
     elements[i].appendChild(document.createTextNode(text))
     changes[i].parentNode.removeChild(changes[i])
   }
+
+  // display alert
+  toggleAlert()
 })
+
+function toggleAlert () {
+  $('#alertbanner').addClass('show')
+  setTimeout(function () {
+    $('#alertbanner').removeClass('show')
+  }, 3000)
+  return false
+}

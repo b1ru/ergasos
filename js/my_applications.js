@@ -25,9 +25,19 @@ $('#myModal').on('shown.bs.modal', function (e) {
       }
     }
     orgcard.parentNode.removeChild(orgcard)
+
+    toggleAlert();
   })
 })
 
 $('#myModal').on('hidden.bs.modal', function () {
   $('#confirmbtn').off('click')
 })
+
+function toggleAlert () {
+  $('#alertbanner').addClass('show')
+  setTimeout(function () {
+    $('#alertbanner').removeClass('show')
+  }, 3000)
+  return false
+}
