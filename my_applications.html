@@ -11,7 +11,7 @@
 		<title>Ergasos</title>
 
 		<!-- My CSS file -->
-		<link rel="stylesheet" type="text/css" href="my_listings.css">
+		<link rel="stylesheet" type="text/css" href="css/my_applications.css">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -39,6 +39,14 @@
   		</div>
 		</nav>
 
+		<!-- Alert -->
+		<div class = "alert alert-primary alert-dismissable fade" id = "alertbanner" role = "alert">
+			<strong> Your application has been deleted </strong>
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+
     <!-- Main Page -->
     <div class="jumbotron">
       <!-- Card no1 -->
@@ -52,8 +60,9 @@
           <span class="left"> <a href="./aggelia.html" class="btn btn-primary">View Details</a> </span>
           <span class="right"> <button type = "button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Remove application</button> </span>
         </div>
+			<br>
       </div>
-      <br>
+
       <!-- Card no2 -->
       <div class="card">
         <div class="card-header" id="app2">
@@ -65,8 +74,8 @@
           <span class="left"> <a href="./aggelia.html" class="btn btn-primary">View Details</a> </span>
           <span class="right"> <button type = "button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Remove application</button> </span>
         </div>
+			<br>
       </div>
-      <br>
       <!-- Card no3 -->
       <div class="card">
         <div class="card-header" id="app3">
@@ -97,7 +106,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-danger" onclick="delete_listing(event)">Confirm</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" id="confirmbtn">Confirm</button>
           </div>
         </div>
       </div>
@@ -108,7 +117,7 @@
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="my_listings.js"></script>
+    <script type="text/javascript" src="js/my_applications.js"></script>
   </body>
 
 </html>

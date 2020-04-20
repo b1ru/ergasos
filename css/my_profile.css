@@ -40,6 +40,13 @@ h4{
   display: none;
 }
 
-#save_link{
+#savebtn{
   display: none;
+}
+
+#alertbanner {
+  width: 100%;
+  height: 35px;
+  padding: 0;
+  margin: 0;
 }
