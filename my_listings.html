@@ -50,10 +50,11 @@
           <h5 class="card-title">  Junior Software Developer Intership</h5>
           <p class="card-text"> <ul> <li> Number of applicants: 20 </li> </ul> </p>
           <span class="left"> <a href="./aggelia.html" class="btn btn-primary">View Details</a> </span>
-          <span class="right"> <button type = "button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Close listing</button> </span>
+          <span class="right"> <button type = "button" class="btn btn-danger deletebutton" data-toggle="modal" data-target="#myModal">Close listing</button> </span>
         </div>
+			<br>
       </div>
-      <br>
+
       <!-- Card no2 -->
       <div class="card">
         <div class="card-header" id="listing2">
@@ -63,10 +64,10 @@
           <h5 class="card-title"> Software Engineer </h5>
           <p class="card-text"> <ul> <li> Number of applicants: 50 </li> </ul> </p>
           <span class="left"> <a href="./aggelia.html" class="btn btn-primary">View Details</a> </span>
-          <span class="right"> <button type = "button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Close listing</button> </span>
+          <span class="right"> <button type = "button" class="btn btn-danger deletebutton" data-toggle="modal" data-target="#myModal">Close listing</button> </span>
         </div>
+			<br>
       </div>
-      <br>
       <!-- Card no3 -->
       <div class="card">
         <div class="card-header" id="listing3">
@@ -76,7 +77,7 @@
           <h5 class="card-title"> Web Designer </h5>
           <p class="card-text"> <ul> <li> Number of applicants: 8 </li> </ul></p>
           <span class="left"> <a href="./aggelia.html" class="btn btn-primary">View Details</a> </span>
-          <span class="right"> <button type = "button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Close listing</button> </span>
+          <span class="right"> <button type = "button" class="btn btn-danger deletebutton" data-toggle="modal" data-target="#myModal">Close listing</button> </span>
         </div>
       </div>
     </div>
@@ -97,7 +98,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-danger" onclick="delete_listing(event)">Confirm</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" id="confirmbtn">Confirm</button>
           </div>
         </div>
       </div>
