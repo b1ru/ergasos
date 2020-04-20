@@ -1,0 +1,11 @@
+.left{
+  float:left;
+}
+
+.right{
+  float:right;
+}
+
+.card{
+  background-color: rgba(189, 225, 230,0.6);
+}
