@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Register-ΕργαSOS</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title>ΕργαSOS-Register</title>
 	<link rel="stylesheet" type="text/css" href="css/rstyle.css">
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		<a class="navbar-brand" href="./index.html">ErgaSOS</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  		  <span class="navbar-toggler-icon"></span>
+  		</button>
+
+
+
+  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  		  <ul class="navbar-nav mr-auto">
+  		    <li class="nav-item active">
+  		    </li>
+  		  </ul>
+				<a href="https://billtsek.github.io/ergasos/sign-in.html">
+				<button type="button" class="btn btn-success">Sign In</button>
+				</a>
+				<a href="https://billtsek.github.io/ergasos/register.html">
+				<button type="button" id="sign-in-btn" class="btn btn-success">Join Now</button>
+				</a>
+  		</div>
+	</nav>
+
 	<div class="box-1">
 		<div>
 			<h2 id="mainHeader">Register</h2>
@@ -36,32 +59,19 @@
 					<input class="form" type="password" name="password" placeholder="Enter password">
 				</div>
 
-				<div class="p">
-					<label>Gender</label>
-					<select class="form" name="gender">
-						<option value="male">Male</option>>
-						<option value="female">Female</option>>
-						<option value="other">Other</option>>
-					</select>
-				</div>
-					
-				<div class="p">
-					<label>Date of Birth:</label>
-					<input class="form" type="date" name="birthday">
-				</div>
-
 		</div>
 		<div>
 			<input class="button" type="submit" name="submit" value="Register">
 		</div>
 		</form>
+		<div id="signin">
+		<a href="https://billtsek.github.io/ergasos/sign-in.html">Sign In</a>
+		</div>
 	</div>
-	<div id="signin">
-		<a href="../bakalh/signin.html">Sign In</a>
-	</div>
+	
 
 	<footer id="mainFooter">
-		<p>Copyright &copy; 2020, ΕργαSOS</p>
+
 	</footer>
 	
 </body>
