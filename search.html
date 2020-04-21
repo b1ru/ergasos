@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Search-ΕργαSOS</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title>Ergasos</title>
 	<link rel="stylesheet" type="text/css" href="css/sstyle.css">
 </head>
 <body>
 
-	<div class="topnav">
-		<label>Job Type</label>
-		<select class="form" name="jobType">
-			<option value="fullTime">Full Time</option>>
-			<option value="partTime">Part Time</option>>
-		</select>
- 		<a class="active" href="#home">ΕργαSOS</a>
- 		<a href="#about">About</a>
-  		<a href="#contact">Contact</a>
-  		<a id="signIn" href="#signIn">Sign In</a>
-  		<a id="signUp" href="../bakalh/register.html">Sign Up</a>
-  		<input type="text" placeholder="Search..">
-  		<input type="text" placeholder="Location">
-	</div>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		<a class="navbar-brand" href="./index.html">ErgaSOS</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  		  <span class="navbar-toggler-icon"></span>
+  		</button>
+
+  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  		  <ul class="navbar-nav mr-auto">
+  		    <li class="nav-item active">
+  		    </li>
+  		  </ul>
+				<a href="./sign-in.html">
+				<button type="button" class="btn btn-success">Sign In</button>
+				</a>
+				<button type="button" id="sign-in-btn" class="btn btn-success">Join Now</button>
+  		</div>
+		</nav>
 
 	<div class="container">
 		<section id="main">
@@ -29,31 +33,12 @@
 			<p>
 				Thessaloniki, Central Macedonia, Greece
 			</p>
-		</section>
-
-		<aside id="sidebar">
-			<p>
-				ΟργαSOS continues its successful paid internship program, allowing interns to gain experience in multiple areas of Software Development.
-				Internships in Thessaloniki prepare candidates for work in the field of Software Research.
-			</p>
-			<p>
-				This internship program runs for four (4) calendar months.
-			</p>
-			<ul>
-				<li>Application debugging skills</li>
-				<li>C and Python development skills</li>
-				<li>Systems programming skills</li>
-				<li>Good understanding of networking and TCP/IP concepts</li>
-				<li>Good understanding of at least two operating systems (Microsoft Windows, GNU/Linux, Android, OSX or iOS)</li>
-			</ul>
-
 			<form action="proccess.php" method="POST">
 				<div>
-					<input class="button" type="submit" name="submit" value="Apply Now">
+					<input class="button" type="submit" name="submit" value="Read More">
 				</div>
 			</form>
-			
-		</aside>
+		</section>
 	</div>
 
 	<footer id="mainFooter">
