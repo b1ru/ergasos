@@ -26,7 +26,7 @@ $('#myModal').on('shown.bs.modal', function (e) {
     }
     orgcard.parentNode.removeChild(orgcard)
 
-    toggleAlert();
+    toggleAlert()
   })
 })
 
