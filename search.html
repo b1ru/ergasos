@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<title>Ergasos-Search</title>
+	<title>ErgaSOS-Search</title>
 	<link rel="stylesheet" type="text/css" href="css/sstyle.css">
 </head>
 <body>
@@ -13,6 +13,8 @@
   		  <span class="navbar-toggler-icon"></span>
   		</button>
 
+
+
   		<div class="collapse navbar-collapse" id="navbarSupportedContent">
   		  <ul class="navbar-nav mr-auto">
   		    <li class="nav-item active">
@@ -21,29 +23,41 @@
 				<a href="./sign-in.html">
 				<button type="button" class="btn btn-success">Sign In</button>
 				</a>
+				<a href="./register.html">
 				<button type="button" id="sign-in-btn" class="btn btn-success">Join Now</button>
+				</a>
   		</div>
 		</nav>
 
+	<div id="search">
+		<label>Job Type</label>
+		<select class="form" name="jobType">
+			<option value="fullTime">Full Time</option>>
+			<option value="partTime">Part Time</option>>
+		</select>
+		<input type="text" placeholder="Search..">
+		<input type="text" placeholder="Location..">
+	</div>	
+
+
 	<div class="container">
+	
 		<section id="main">
-			<img src="ergasos/docs/auth.jpg" alt="Auth">
 			<a id="aggelia" href="#aggelia">Junior Software Developer Intership(Thessaloniki)</a>
 			<a id="etaireia" href="#etaireia">ΕργαSOS A.E.</a>
-			<p>
-				Thessaloniki, Central Macedonia, Greece
+			<p id="location">
+				Thessaloniki, Greece
 			</p>
-			<form action="proccess.php" method="POST">
-				<div>
-					<input class="button" type="submit" name="submit" value="Read More">
-				</div>
-			</form>
 		</section>
+
+		<form action="https://billtsek.github.io/ergasos/aggelia.html">
+			<div>
+				<input class="button" type="submit" value="Read More">
+			</div>
+		</form>
+
 	</div>
 
-	<footer id="mainFooter">
-		<p>Copyright &copy; 2020, ΕργαSOS</p>
-	</footer>
 
 </body>
 </html>
