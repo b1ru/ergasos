@@ -57,3 +57,7 @@ function toggleAlert () {
   }, 3000)
   return false
 }
+
+$('#closeAlertBtn').on('click', function () {
+  $('#alertbanner').removeClass('show')
+})
