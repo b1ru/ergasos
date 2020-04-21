@@ -46,7 +46,9 @@ h4{
 
 #alertbanner {
   width: 100%;
-  height: 35px;
-  padding: 0;
-  margin: 0;
+  height: 40px;
+}
+
+#jumbo {
+  padding-top: 0;
 }
