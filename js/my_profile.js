@@ -11,6 +11,7 @@ $('#editbtn').on('click', function () {
     newtag.setAttribute('type', 'text')
     newtag.setAttribute('class', 'input_text')
     newtag.setAttribute('placeholder', elements[i].innerHTML)
+    newtag.setAttribute('value', elements[i].innerHTML)
     elements[i].innerHTML = ''
     elements[i].appendChild(newtag)
   }
