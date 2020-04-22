@@ -65,3 +65,7 @@ $('#myModal').on('shown.bs.modal', function (e) {
     toggleAlert();
   });
 });
+
+$('#myModal').on('hidden.bs.modal', function () {
+  $('#confirmbtn').off('click');
+});

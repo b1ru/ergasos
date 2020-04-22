@@ -12,10 +12,3 @@ function toggleAlert () {
 $('.closeAlertBtn').on('click', function () {
   $('.alert').removeClass('show');
 });
-
-/*
-  Modal events
-*/
-$('#myModal').on('hidden.bs.modal', function () {
-  $('#confirmbtn').off('click');
-});

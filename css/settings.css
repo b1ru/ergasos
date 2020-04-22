@@ -1,0 +1,31 @@
+#ultradangertext {
+  color: rgb(125, 11, 11)
+}
+
+#captcha {
+  font-weight: bold;
+  text-align: center;
+  font: Impact;
+  font-size: 20px;
+}
+
+.dangertext {
+  color: rgb(255, 24, 24);
+}
+
+.center {
+  text-align: center;
+}
+
+.list {
+  list-style-type: square;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+}
+
+#inputcaptcha{
+    text-align: center;
+}

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<title>Settings</title>
+
+		<!-- My CSS files -->
+		<link rel="stylesheet" type="text/css" href="css/main_style.css">
+    <link rel="stylesheet" type="text/css" href="css/settings.css">
+	</head>
+	<body>
+
+		<!-- NAVIGATION BAR -->
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		<a class="navbar-brand" href="./index.html">ErgaSOS</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  		  <span class="navbar-toggler-icon"></span>
+  		</button>
+
+  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  		  <ul class="navbar-nav mr-auto">
+  		    <li class="nav-item active">
+  		    </li>
+  		  </ul>
+				<a href="./sign-in.html">
+				<button type="button" class="btn btn-success">Sign In</button>
+				</a>
+				<button type="button" id="sign-in-btn" class="btn btn-success">Join Now</button>
+  		</div>
+		</nav>
+
+    <!-- MAIN PAGE -->
+    <div class="jumbotron" id="jumbo">
+      <div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#PasswordModal">Change Password</button>
+      </div>
+      <div>
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">Delete Account</button>
+      </div>
+    </div>
+
+    <!-- CHANGE PASSWORD MODAL -->
+    <div class="modal" id="PasswordModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Change Password</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="oldpassword">Old Password</label>
+                <input type="password" class="form-control" placeholder="Enter your old password" required>
+              </div>
+              <div class="form-group">
+                <label for="newpassword">New Password</label>
+                <input type="password" class="form-control" placeholder="Enter a new password" required>
+              </div>
+              <div class="form-group">
+                <label for="newpasswordrepeat">Repeat New Password</label>
+                <input type="password" class="form-control" placeholder="Repeat your new password" required>
+              </div>
+              <button type="submit" class="btn btn-success btn-lg btn-block" id="confirmbtn">Confirm</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DELETE ACCOUNT MODAL -->
+    <div class="modal" id="DeleteModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center d-block">
+            <h5 class="modal-title d-inline-block" id="ultradangertext">Warning!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5 class="dangertext center">You are about to delete your account</h5>
+            <br>
+            <ul class="list">
+						<li><h6>This action is <span class="dangertext">irreversible</span></h6></li>
+            <li><h6>If you wish to continue,please type the following phrase: </h6></li>
+            </ul>
+            <p id="captcha">Delete Account</p>
+            <input type="text" class="form-control" id="inputcaptcha" placeholder="Enter the text above">
+          </div>
+          <div class="modal-footer">
+            <a role="button" href="./index.html" class="btn btn-danger btn-lg btn-block disabled" id="deletebtn">Confirm</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- JavaScript Scripts -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main_scripts.js"></script>
+		<script type="text/javascript" src="js/settings.js"></script>
+  </body>
+</html>
