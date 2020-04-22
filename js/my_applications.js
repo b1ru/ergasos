@@ -29,19 +29,3 @@ $('#myModal').on('shown.bs.modal', function (e) {
     toggleAlert()
   })
 })
-
-$('#myModal').on('hidden.bs.modal', function () {
-  $('#confirmbtn').off('click')
-})
-
-function toggleAlert () {
-  $('#alertbanner').addClass('show')
-  setTimeout(function () {
-    $('#alertbanner').removeClass('show')
-  }, 3000)
-  return false
-}
-
-$('#closeAlertBtn').on('click', function () {
-  $('#alertbanner').removeClass('show')
-})

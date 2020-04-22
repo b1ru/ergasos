@@ -1,4 +1,4 @@
-document.getElementById('addtagbtn').addEventListener('click', function () {
+$('#addtagbtn').on('click', function () {
   var addbtn = document.getElementById('addtagbtn');
   if (addbtn.previousElementSibling.value) {
     var tag = addbtn.previousElementSibling.value
@@ -13,6 +13,10 @@ document.getElementById('addtagbtn').addEventListener('click', function () {
   }
 })
 
+
+/*
+  Tag button events
+*/
 $('#tagspan').on('mouseover', '.tag', function () {
   $(this).css('text-decoration', 'line-through')
 })
