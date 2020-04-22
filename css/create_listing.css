@@ -25,11 +25,6 @@ h1,h2,h3 {
   text-align: center;
 }
 
-#sign-in-btn {
-		background-color: #343a40;
-			margin-left: 7px;
-}
-
 #addtagbtn,
 .tag {
   margin-top: 10px;
