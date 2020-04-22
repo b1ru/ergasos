@@ -13,9 +13,6 @@
 		<!-- My CSS files -->
 		<link rel="stylesheet" type="text/css" href="css/main_style.css">
 		<link rel="stylesheet" type="text/css" href="css/create_listing.css">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 
 	<body>
@@ -40,95 +37,85 @@
   		</div>
 		</nav>
 
-		<!-- Form -->
-		<div class="jumbotron" id = "jumbo">
+		<div class="jumbotron" id="jumbo">
 			<div>
-				<h1> Looking for new employees? </h1>
+				<h1>Looking for new employees?</h1>
 				<br>
-				<h2> Please fill out the form below </h2>
+				<h2>Please fill out the form below</h2>
 			</div>
 			<hr>
+
 			<form>
-				<!-- Main Header -->
-				<h3 id = "CInfo"> Company Info </h3>
-
-				<div class = "form-row">
-					<div class = "col offset-md-1">
-						<h4> Your company's main attributes </h4>
+				<h3 id="CInfo"> Company Info </h3>
+				<div class="form-row">
+					<div class="col offset-md-1">
+						<h4>Your company's main attributes</h4>
 					</div>
-
-					<div class = "col offset-md-1">
-						<h4> Your company is situated in </h4>
+					<div class="col offset-md-1">
+						<h4>Your company is situated in</h4>
 					</div>
-
-					<div class = "col offset-md-1">
-						<h4> Applicants can reach you at </h4>
+					<div class="col offset-md-1">
+						<h4>Applicants can reach you at</h4>
 					</div>
 				</div>
-				<div class = "form-row">
+				<div class="form-row">
 					<div class="form-group col">
-						<label for="CompanyName" > Company Name </label>
+						<label for="CompanyName" >Company Name</label>
 						<input type="text" class="form-control" placeholder="Name" required>
 					</div>
-
 					<div class="form-group col">
-						<label for="City" > City </label>
+						<label for="City" >City</label>
 						<input type="text" class="form-control" placeholder="City" required>
 					</div>
-
 					<div class="form-group col">
-						<label for="CompanyEmail"> Email </label>
+						<label for="CompanyEmail">Email</label>
 						<input type="email" class="form-control" placeholder="email@address.com">
 					</div>
 				</div>
-				<div class = "form-row">
+				<div class="form-row">
 					<div class="form-group col">
-						<label for="CompanyAddress"> Company Address </label>
+						<label for="CompanyAddress">Company Address</label>
 						<input type="text" class="form-control" placeholder="Address" required>
 					</div>
-
 					<div class="form-group col">
-						<label for="Country"> Country </label>
+						<label for="Country">Country</label>
 						<input type="text" class="form-control" placeholder="Country" required>
 					</div>
-
 					<div class="form-group col">
-						<label for="CompanyNumber"> Telephone Number </label>
+						<label for="CompanyNumber">Telephone Number</label>
 						<input type="number" class="form-control" placeholder="Number">
 					</div>
 				</div>
 
-
-				<!-- 						OK 																			-->
-				<h3 id = "CInfo"> Listing Info </h3>
-				<div class = "form-group"
-					<label for="JobTitle"> Job Title </label>
+				<h3 id="CInfo">Listing Info</h3>
+				<div class="form-group"
+					<label for="JobTitle">Job Title</label>
 					<input type="text" class="form-control" placeholder="eg. Software Engineer" required>
 				</div>
-				<div class = "form-group"
-					<label for="JobDesc"> Job Description </label>
-					<textarea class="form-control" rows = "4" placeholder="Please describe what the job offer entails"></textarea>
+				<div class="form-group"
+					<label for="JobDesc">Job Description</label>
+					<textarea class="form-control" rows="4" placeholder="Please describe what the job offer entails"></textarea>
 				</div>
 				<br>
 				<div class="form-inline">
-					<label for="JobHours" id="hours"> Applicants are required to work </label>
+					<label for="JobHours" id="hours">Applicants are required to work</label>
 					<select>
-						<option selected >Full Time </option>
-						<option value="2">Part Time </option>
+						<option selected>Full Time</option>
+						<option value="2">Part Time</option>
 					</select>
 				</div>
 				<div class="form-group">
-					<label for="JobTags"> Please use some tags to help applicants find your listing </label>
+					<label for="JobTags">Please use some tags to help applicants find your listing</label>
 					<input type="text" class="form-control" id="taginput" placeholder="Tag">
-					<button type="button" class="btn btn-dark" id="addtagbtn"> Add </button>
+					<button type="button" class="btn btn-dark" id="addtagbtn">Add</button>
 					<!-- span for tags -->
-					<span id = "tagspan"></span>
+					<span id="tagspan"></span>
 				</div>
 				<button type="submit" class="btn btn-primary my-1">Submit Listing</button>
 			</form>
 		</div>
 
-		<!-- Optional JavaScript -->
+		<!-- JavaScript Scripts -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
