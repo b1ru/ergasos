@@ -12,3 +12,7 @@ function toggleAlert () {
 $('.closeAlertBtn').on('click', function () {
   $('.alert').removeClass('show');
 });
+
+$('.modal').on('hidden.bs.modal', function () {
+  $(this).find('input').val('');
+});
