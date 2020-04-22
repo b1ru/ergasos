@@ -2,15 +2,15 @@
   Alert banner events
 */
 function toggleAlert () {
-  $('#alertbanner').addClass('show');
+  $('.alert').addClass('show');
   setTimeout(function () {
-    $('#alertbanner').removeClass('show');
+    $('.alert').removeClass('show');
   }, 2000);
   return false;
 }
 
-$('#closeAlertBtn').on('click', function () {
-  $('#alertbanner').removeClass('show');
+$('.closeAlertBtn').on('click', function () {
+  $('.alert').removeClass('show');
 });
 
 /*
