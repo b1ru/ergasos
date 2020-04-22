@@ -13,6 +13,16 @@ h2{
 
 h3{
   font-size: 23px;
+  color: rgb(91, 118, 186)
+}
+
+h4{
+  font-size: 21px;
+  color: rgb(97, 97, 97)
+}
+
+h1,h2,h3 {
+  text-align: center;
 }
 
 #sign-in-btn {
@@ -24,4 +34,22 @@ h3{
 .tag {
   margin-top: 10px;
   margin-right: 10px;
+}
+
+#CInfo {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.headers {
+  display: inline;
+  justify-content: center;
+}
+
+#jumbo {
+  padding-top: 2%;
+}
+
+.headercols {
+  width: 12.5%;
 }
