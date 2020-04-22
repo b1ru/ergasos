@@ -5,7 +5,7 @@ function toggleAlert () {
   $('#alertbanner').addClass('show')
   setTimeout(function () {
     $('#alertbanner').removeClass('show')
-  }, 3000)
+  }, 2000)
   return false
 }
 
