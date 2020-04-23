@@ -1,23 +1,13 @@
 *{
 	margin-left: 0px;
 }
-.box1{
-	background-color:#343A40;
-	color:#fff;
-	font-size: 12px;
-	padding:30px;
-	margin-top:-18px;
-	padding-left: 15px;
-	font:20px normal Arial, Helvetica, sans-serif; 
-}
 .box2{
 	padding-bottom:20px;
-	padding-top:1px;
+	padding-top:0px;
 	color:#0E1011;
 	background-color:#E9ECEF;
-	margin-top:-15px;
 	padding-left: 30px;
-	padding-bottom: 50px;
+	height:100vh;
 	font:12px normal Arial, Helvetica, sans-serif;
 }
 .Titlos{
@@ -27,3 +17,8 @@
 .category{
 	color:#616161;
 }
+#sign-in-btn {
+	background-color: #343a40;
+	margin-left: 7px;
+}
+
