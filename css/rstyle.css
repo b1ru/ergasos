@@ -27,7 +27,6 @@ body{
 
 .container input[type=text], input[type=date], input[type=password], input[type=email], select {
   padding: 6px;
-  border-radius: 8px;
   margin-right: 16px;
   font-size: 17px;
   margin-bottom: 5px;
