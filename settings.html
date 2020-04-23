@@ -38,6 +38,14 @@
 
     <!-- MAIN PAGE -->
     <div class="jumbotron" id="jumbo">
+			<!-- ALERT -->
+			<div class="alert alert-success fade" role="alert">
+				<strong>Your password has changed successfully</strong>
+				<button type="button" class="close closeAlertBtn" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+
       <div>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#PasswordModal">Change Password</button>
       </div>
@@ -57,7 +65,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="myform">
               <div class="form-group">
                 <label for="oldpassword">Old Password</label>
                 <input type="password" class="form-control" placeholder="Enter your old password" required>

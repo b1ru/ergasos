@@ -5,3 +5,9 @@ window.setInterval(function ToggleButton () {
     $('#deletebtn').addClass('disabled');
   }
 },200);
+
+$('#myform').submit(function () {
+  toggleAlert();
+  $('#PasswordModal').modal('hide');
+  return false;
+});
