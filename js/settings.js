@@ -6,8 +6,16 @@ window.setInterval(function ToggleButton () {
   }
 },200);
 
-$('#myform').submit(function () {
+$('#passwordform').submit(function () {
+  $('.alert').find('strong').html('Your password has changed successfully');
   toggleAlert();
   $('#PasswordModal').modal('hide');
+  return false;
+});
+
+$('#usernameform').submit(function () {
+  $('.alert').find('strong').html('Your username has changed successfully');
+  toggleAlert();
+  $('#UsernameModal').modal('hide');
   return false;
 });

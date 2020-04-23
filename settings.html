@@ -37,7 +37,7 @@
 		</nav>
 
     <!-- MAIN PAGE -->
-    <div class="jumbotron" id="jumbo">
+    <div>
 			<!-- ALERT -->
 			<div class="alert alert-success fade" role="alert">
 				<strong>Your password has changed successfully</strong>
@@ -46,74 +46,126 @@
 				</button>
 			</div>
 
-      <div>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#PasswordModal">Change Password</button>
-      </div>
-      <div>
-        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">Delete Account</button>
-      </div>
-    </div>
+			<!-- NAVIGATION -->
+			<div class="navcontainer">
+				<div class="nav flex-column nav-pills" id="tab" role="tablist" aria-orientation="vertical">
+					<a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab" aria-controls="account" aria-selected="true">Account</a>
+  				<a class="nav-link" id="preferences-tab" data-toggle="pill" href="#preferences" role="tab" aria-controls="preferences" aria-selected="false">Preferences</a>
+				</div>
+			</div>
 
-    <!-- CHANGE PASSWORD MODAL -->
-    <div class="modal" id="PasswordModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header text-center d-block">
-            <h5 class="modal-title d-inline-block">Change Password</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form id="myform">
-              <div class="form-group">
-                <label for="oldpassword">Old Password</label>
-                <input type="password" class="form-control" placeholder="Enter your old password" required>
-              </div>
-              <div class="form-group">
-                <label for="newpassword">New Password</label>
-                <input type="password" class="form-control" placeholder="Enter your new password" required>
-              </div>
-              <div class="form-group">
-                <label for="newpasswordrepeat">Repeat New Password</label>
-                <input type="password" class="form-control" placeholder="Enter your new password again" required>
-              </div>
-              <button type="submit" class="btn btn-success btn-lg btn-block" id="confirmbtn">Confirm</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+			<!-- CONTENT -->
+			<div class="tab-content" id="tabContent">
+      	<div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account">
+					<h3>Username</h3>
+					<hr>
+					<div>
+						<p class="label"><strong>Current username:</strong> atoumpas</p>
+						<button type="button" class="btn btn-primary changebtn" data-toggle="modal" data-target="#UsernameModal">Change Username</button>
+					</div>
 
-    <!-- DELETE ACCOUNT MODAL -->
-    <div class="modal" id="DeleteModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header text-center d-block">
-            <h5 class="modal-title d-inline-block" id="ultradangertext">Warning!</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <h5 class="dangertext center">You are about to delete your account</h5>
-            <br>
-            <ul class="list">
-						<li><h6>This action is <span class="dangertext">irreversible</span></h6></li>
-            <li><h6>If you wish to continue,please type the following phrase: </h6></li>
-            </ul>
-            <p id="captcha">Delete Account</p>
-            <input type="text" class="form-control" id="inputcaptcha" placeholder="Enter the text above">
-          </div>
-          <div class="modal-footer">
-            <a role="button" href="./index.html" class="btn btn-danger btn-lg btn-block disabled" id="deletebtn">Confirm</a>
-          </div>
-        </div>
-      </div>
-    </div>
+					<h3>Password</h3>
+					<hr>
+					<div>
+						<p class="label"><strong>Current password:</strong> ***********</p>
+        		<button type="button" class="btn btn-primary changebtn" data-toggle="modal" data-target="#PasswordModal">Change Password</button>
+					</div>
+
+					<h3>Account</h3>
+					<hr>
+					<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">Delete Account</button>
+      	</div>
+
+      	<div class="tab-pane fade" id="preferences" role="tabpanel" aria-labelledby="preferences">
+      	</div>
+    	</div>
 
 
+			<!-- CHANGE USERNAME MODAL -->
+			<div class="modal" id="UsernameModal" tabindex="-1" role="dialog">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header text-center d-block">
+							<h5 class="modal-title d-inline-block">Change Username</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form id="usernameform">
+								<div class="form-group">
+									<label for="oldusername">Old Username</label>
+									<input type="text" class="form-control" placeholder="Enter your old username" required>
+								</div>
+								<div class="form-group">
+									<label for="newusername">New Username</label>
+									<input type="text" class="form-control" placeholder="Enter your new username" required>
+								</div>
+								<button type="submit" class="btn btn-success btn-lg btn-block" id="confirmbtn">Update Username</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 
+    	<!-- CHANGE PASSWORD MODAL -->
+    	<div class="modal" id="PasswordModal" tabindex="-1" role="dialog">
+      	<div class="modal-dialog modal-dialog-centered" role="document">
+        	<div class="modal-content">
+          	<div class="modal-header text-center d-block">
+            	<h5 class="modal-title d-inline-block">Change Password</h5>
+            	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              	<span aria-hidden="true">&times;</span>
+            	</button>
+          	</div>
+          	<div class="modal-body">
+            	<form id="passwordform">
+              	<div class="form-group">
+                	<label for="oldpassword">Old Password</label>
+	                <input type="password" class="form-control" placeholder="Enter your old password" required>
+	              </div>
+              	<div class="form-group">
+                	<label for="newpassword">New Password</label>
+                	<input type="password" class="form-control" placeholder="Enter your new password" required>
+              	</div>
+              	<div class="form-group">
+                	<label for="newpasswordrepeat">Repeat New Password</label>
+                	<input type="password" class="form-control" placeholder="Enter your new password again" required>
+              	</div>
+              	<button type="submit" class="btn btn-success btn-lg btn-block" id="confirmbtn">Update Password</button>
+            	</form>
+          	</div>
+        	</div>
+      	</div>
+    	</div>
+
+    	<!-- DELETE ACCOUNT MODAL -->
+    	<div class="modal" id="DeleteModal" tabindex="-1" role="dialog">
+      	<div class="modal-dialog modal-dialog-centered" role="document">
+        	<div class="modal-content">
+          	<div class="modal-header text-center d-block">
+            	<h5 class="modal-title d-inline-block" id="ultradangertext">Warning!</h5>
+            	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              	<span aria-hidden="true">&times;</span>
+            	</button>
+          	</div>
+          	<div class="modal-body">
+            	<h5 class="dangertext center">You are about to delete your account</h5>
+            	<br>
+            	<ul class="list">
+								<li><h6>This action is <span class="dangertext">irreversible</span></h6></li>
+            	<li><h6>If you wish to continue,please type the following phrase: </h6></li>
+            	</ul>
+            	<p id="captcha">Delete Account</p>
+            	<input type="text" class="form-control" id="inputcaptcha" placeholder="Enter the text above">
+          	</div>
+          	<div class="modal-footer">
+            	<a role="button" href="./index.html" class="btn btn-danger btn-lg btn-block disabled" id="deletebtn">Confirm</a>
+          	</div>
+        	</div>
+      	</div>
+    	</div>
+		<div>
 
     <!-- JavaScript Scripts -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
