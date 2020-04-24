@@ -47,14 +47,6 @@ body{
 	margin-top: -10px;
 }
 
-.box-1.button:hover{
-	background-color: green;
-}
-
-.box-1.button:active{
-	background-color: #212529;
-}
-
 #mainHeader{
 	text-align: center;
 	margin-top: 10px;
@@ -84,4 +76,12 @@ body{
 
 .p{
 	padding: 5px;
+}
+
+.button:hover{
+  background-color: green;
+}
+
+.button:active{
+  background-color: #212529;
 }
