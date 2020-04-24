@@ -29,6 +29,21 @@ html {
 footer {
 	height: 25px;
 	color: #ffffff;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 
+#search-button:hover {
+	background-color: #343a40 ;
+}
+
+.footer-link {
+	color: #ffffff;
+}
+
+.footer-link:hover {
+	color: #64871a; 
+}
