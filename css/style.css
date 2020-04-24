@@ -2,7 +2,7 @@ body,
 html {
   width: 100%;
 	height: 100vh;
-	background-color : #000f08;
+	background-color :#ececec; 
 }
 
 #sign-in-btn {
@@ -48,4 +48,14 @@ footer {
 
 .footer-link:hover {
 	color: #64871a; 
+}
+
+#toggle-nav {
+	color: red;
+	margin-right: 20px;
+}
+
+#toggle-nav-container {
+	display: flex;
+	justify-content: flex-end;
 }
