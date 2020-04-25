@@ -2,24 +2,24 @@ body,
 html {
   width: 100%;
 	height: 100vh;
-	background-color :#ececec; 
+	background-color :#ececec;
 }
 
 
 .job-link {
-	color: #64871a; 
+	color: #64871a;
 }
 
 .job-link:hover {
-	color: #64871a; 
+	color: #64871a;
 }
 
 .job-link:visited {
-	color: #64871a; 
+	color: #64871a;
 }
 
 .jumbotron {
-	height:100%;
+	height: 90%;
 	margin: 0px;
 }
 
@@ -35,7 +35,7 @@ html {
 }
 
 /* The folowing are needed on all pages
-	for the navbar and the footer 
+	for the navbar and the footer
  -------------------------------------------*/
 
 #register-btn {
@@ -52,6 +52,9 @@ html {
 }
 
 footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 	height: 25px;
 	color: #ffffff;
 	padding: 10px 20px;
@@ -68,7 +71,7 @@ footer {
 }
 
 .footer-link:hover {
-	color: #64871a; 
+	color: #64871a;
 }
 
 /* ------------------------------------------*/
