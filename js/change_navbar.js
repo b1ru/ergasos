@@ -13,6 +13,8 @@ function change_nav() {
     <a class="dropdown-item" href="#">My Listings</a>
     <a class="dropdown-item" href="#">My Profile</a>
     <a class="dropdown-item" href="#">Settings</a>
+		<div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Logout</a>
   </div>
 	`
 	document.getElementById("navbarSupportedContent").appendChild(new_div)
