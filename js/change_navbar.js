@@ -13,11 +13,11 @@ function switch_nav_2() {
 	new_div = document.createElement("DIV")
 	new_div.setAttribute('class', 'dropdown')
 	new_div.innerHTML = `
-		<button class="btn btn-secondary  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+		<button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./images/user.svg" alt="user icon"></button>
   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="./my_profile.html">Profile</a>
     <a class="dropdown-item" href="./my_applications.html">My Applications</a>
     <a class="dropdown-item" href="./my_listings.html">My Listings</a>
-    <a class="dropdown-item" href="./my_profile.html">My Profile</a>
     <a class="dropdown-item" href="./settings.html">Settings</a>
 		<div class="dropdown-divider"></div>
     <a id="logout-link" class="dropdown-item" href="#">Logout</a>
