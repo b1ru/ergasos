@@ -50,6 +50,10 @@ html {
 	background-color: #343a40 ;
 }
 
+.navbar-brand {
+	padding:0px 20px;
+}
+
 footer {
   position: fixed;
   width: 100%;
