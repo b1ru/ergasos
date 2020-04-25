@@ -44,6 +44,17 @@
 	height: 90vh;
 }
 
+.maincontainer {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background-color: #eee;
+}
+
+.content {
+	padding-bottom: 25px;
+}
+
 
 /* The folowing are needed on all pages
 	for the navbar and the footer
@@ -67,7 +78,7 @@
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   width: 100%;
   bottom: 0;
 	height: 25px;

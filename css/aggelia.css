@@ -11,11 +11,22 @@
 	font:12px normal Arial, Helvetica, sans-serif;
 }
 .Titlos{
-	color:black; 
+	color:black;
 	font: 36px normal Arial, Helvetica, sans-serif;
 }
 .category{
 	color:#616161;
+}
+
+.maincontainer {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background-color: #eee;
+}
+
+.content {
+	padding-bottom: 25px;
 }
 
 /* The folowing are needed on all pages
@@ -40,7 +51,7 @@
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   width: 100%;
   bottom: 0;
 	height: 25px;
