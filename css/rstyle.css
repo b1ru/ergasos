@@ -1,8 +1,3 @@
-#sign-in-btn {
-  background-color: #343a40;
-  margin-left: 7px;
-}
-
 .box-1{
 	font: 17px normal Arial, Helvetica, sans-serif;
 	border: 1px solid #9C9C9C;
@@ -85,3 +80,50 @@ body{
 .button:active{
   background-color: #212529;
 }
+
+
+/* The folowing are needed on all pages
+	for the navbar and the footer
+ -------------------------------------------*/
+
+#register-btn {
+	background-color: #343a40;
+	margin-left: 7px;
+}
+
+#sign-in-link {
+	text-decoration: none ;
+}
+
+#search-button:hover {
+	background-color: #343a40 ;
+}
+
+.navbar-brand {
+	padding:0px 20px;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+	height: 25px;
+	color: #ffffff;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #212529;
+}
+
+
+
+.footer-link {
+	color: #ffffff;
+}
+
+.footer-link:hover {
+	color: #64871a;
+}
+
+/* ------------------------------------------*/
