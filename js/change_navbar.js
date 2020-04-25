@@ -7,13 +7,12 @@ function change_nav() {
 	var new_div = document.createElement("DIV")
 	new_div.setAttribute('class', 'dropdown')
 	new_div.innerHTML = `
-		<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+		<button class="btn btn-secondary  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">My Applications</a>
+    <a class="dropdown-item" href="#">My Listings</a>
+    <a class="dropdown-item" href="#">My Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
   </div>
 	`
 	document.getElementById("navbarSupportedContent").appendChild(new_div)
