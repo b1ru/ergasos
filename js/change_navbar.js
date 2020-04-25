@@ -1,10 +1,16 @@
-function change_nav() {
-	// delete buttons 
-	var buttons = document.getElementById("right-buttons")
+function switch_nav_1() {
+	// delete the dropdown
+	new_div.parentElement.removeChild(new_div);
+
+	// add the sign-in and register buttons
+	document.getElementById("navbarSupportedContent").appendChild(buttons);	
+}
+function switch_nav_2() {
+	// delete the sign-in and register buttons 
 	buttons.parentElement.removeChild(buttons);
 
 	// create dropdown
-	var new_div = document.createElement("DIV")
+	new_div = document.createElement("DIV")
 	new_div.setAttribute('class', 'dropdown')
 	new_div.innerHTML = `
 		<button class="btn btn-secondary  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
@@ -14,10 +20,21 @@ function change_nav() {
     <a class="dropdown-item" href="./my_profile.html">My Profile</a>
     <a class="dropdown-item" href="./settings.html">Settings</a>
 		<div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Logout</a>
+    <a id="logout-link" class="dropdown-item" href="#">Logout</a>
   </div>
 	`
+	// add the dropdown
 	document.getElementById("navbarSupportedContent").appendChild(new_div)
+
+	// when the user clicks 'logout' switch layout
+	document.getElementById("logout-link").addEventListener("click", switch_nav_1);
 }
 
-document.getElementById("toggle-nav").addEventListener("click", change_nav);
+// the sign-in and register buttons
+var buttons = document.getElementById("right-buttons")
+
+// the dropdown
+var new_div;
+
+// when the user clicks "toggle navbar layout', switch layout
+document.getElementById("toggle-nav").addEventListener("click", switch_nav_2);
