@@ -38,7 +38,7 @@ html {
 }
 
 /* The folowing are needed on all pages
-	for the navbar and the footer 
+	for the navbar and the footer
  -------------------------------------------*/
 
 #register-btn {
@@ -54,7 +54,14 @@ html {
 	background-color: #343a40 ;
 }
 
+.navbar-brand {
+	padding:0px 20px;
+}
+
 footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 	height: 25px;
 	color: #ffffff;
 	padding: 10px 20px;
@@ -71,7 +78,7 @@ footer {
 }
 
 .footer-link:hover {
-	color: #64871a; 
+	color: #64871a;
 }
 
 /* ------------------------------------------*/
