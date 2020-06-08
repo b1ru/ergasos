@@ -16,7 +16,16 @@
 	</head>
 
   <body>
-
+		<?php
+			$id = "1";
+			$con = mysqli_connect("localhost","root","","ergasos");
+			$results = mysqli_query($con, "SELECT * FROM account_details WHERE userID = $id");
+			$row = mysqli_fetch_row($results);
+			$name = $row[1]." ".$row[2];
+			$address = $row[3];
+			$email = $row[4];
+			$telephone = $row[5];
+		?>
 
 		<!-- NAVIGATION BAR -->
 
@@ -72,11 +81,19 @@
         <h4> <b> <u> Personal Info: </u> </b> </h4>
         <p>
 					<span class="title">Full Name:</span>
-					<span class="desc">Αχιλλέας Τούμπας</span>
+					<span class="desc">
+						<?php
+							echo $name;
+						 ?>
+					</span>
 				</p>
         <p>
 					<span class="title">Address:</span>
-					<span class="desc">Μαντινείας 81</span>
+					<span class="desc">
+						<?php
+							echo $address;
+						 ?>
+					</span>
 				</p>
       </div>
       <hr>
@@ -84,11 +101,19 @@
         <h4> <b> <u> Contact Info: </u> </b> </h4>
         <p>
 					<span class="title">Email:</span>
-					<span class="desc">atoumpas@csd.auth.gr</span>
+					<span class="desc">
+						<?php
+							echo $email;
+						 ?>
+					</span>
 				</p>
         <p>
 					<span class="title">Phone Number:</span>
-					<span class="desc">6940880123</span>
+					<span class="desc">
+						<?php
+							echo $telephone;
+						 ?>
+					</span>
 				</p>
       </div>
       <hr>
