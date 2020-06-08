@@ -39,25 +39,28 @@
 				</div>
   		</div>
 		</nav>
+		<?php 
+		$con = mysqli_connect("localhost","root","","ergasos");
+		$query="SELECT * FROM listing_details WHERE listingID=1";
+		$result=mysqli_query($con,$query);
+		$row = mysqli_fetch_assoc($result);
+		mysqli_free_result($result);
+		mysqli_close($con);
+		?>
 
 		<div class="box2"><br>
 			<p class="Titlos"> Application Information</p><br><br>
 			<p style="border:3px; border-style:solid; border-radius: 15px; border-color:white; padding: 10px; margin-top:-30px; margin-left:-5px; font-size:18px; background: white; width: 90vw;">
-				<span style="font-size: 30px;">Software Developer</span><br>
+				<span style="font-size: 30px;"><?php echo $row["title"];?></span><br>
 				<span class="category">29/5/1453</span><br>
-				<span class="category">Country:</span> Greece<br>
-				<span class="category">City:</span> Thessaloniki<br>
-				<span class="category">Address:</span> Aristotelous 39<br>
-				<span class="category">Phone Number:</span> 6900000000<br>
-				<span class="category">Email:</span> Aggelia@gmail.com<br>
-				<span class="category">Work Time:</span> Full time<br>
+				<span class="category">Country:</span> <?php echo $row["country"];?><br>
+				<span class="category">City:</span> <?php echo $row["city"];?><br>
+				<span class="category">Address:</span> <?php echo $row["address"];?><br>
+				<span class="category">Phone Number:</span> <?php echo $row["telephone"];?><br>
+				<span class="category">Email:</span> <?php echo $row["email"];?><br>
+				<span class="category">Work Time:</span> <?php if($row["full_time"]==1) echo "Full Time"; else echo "Part Time";?><br>
 				<span style="font-size: 20px;">
-				<span class="category">Description:</span> Looking for full time employees in a software development enviroment. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<span class="category">Description:</span> <?php echo $row["description"];?>
 				</span>
 			</p>
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
