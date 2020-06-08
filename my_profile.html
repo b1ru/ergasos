@@ -126,7 +126,9 @@
 					<span class="right">
 						<img src="images/upload.png">
 						<button type="button" class="btn btn-primary" id="uploadbtn">Upload your CV</button>
-						<input type="file" id="uploadfile">
+						<form action="php/upload_cv.php" method="post" enctype="multipart/form-data">
+							<input type="file" id="uploadfile" onchange="this.form.submit()" name="cvfile">
+						</form>
 					</span>
 				</p>
     	</div>
