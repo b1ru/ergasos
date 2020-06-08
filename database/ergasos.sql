@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 08, 2020 at 01:11 AM
+-- Generation Time: Jun 08, 2020 at 09:23 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -29,8 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `account_details` (
   `userID` int(10) NOT NULL,
-  `first_name` varchar(45) NOT NULL,
-  `last_name` varchar(45) NOT NULL,
+  `name` varchar(45) NOT NULL,
   `address` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `telephone` varchar(45) NOT NULL,
@@ -69,6 +68,7 @@ CREATE TABLE `listings` (
 CREATE TABLE `listing_details` (
   `listingID` int(10) NOT NULL,
   `title` varchar(45) NOT NULL,
+  `date_added` date NOT NULL,
   `country` varchar(45) NOT NULL,
   `city` varchar(45) NOT NULL,
   `address` varchar(45) NOT NULL,
