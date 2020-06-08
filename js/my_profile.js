@@ -26,25 +26,17 @@ function createInput (value) {
 
 function createInputBoxes () {
   var elements = [].slice.call(document.getElementsByClassName('desc'));
+  var newtag = new Array(4);
   for (var i = 0; i < 4; i++) {
-    var newtag = createInput(elements[i].innerHTML);
-    elements[i].innerHTML = '';
-    elements[i].appendChild(newtag);
+    newtag[i] = createInput(elements[i].innerHTML);
   }
-}
-
-function removeInputBoxes () {
-  var elements = [].slice.call(document.getElementsByClassName('desc'));
-  var changes = [].slice.call(document.getElementsByClassName('input_text'));
-  var text;
+  newtag[0].setAttribute('name','name');
+  newtag[1].setAttribute('name','address');
+  newtag[2].setAttribute('name','email');
+  newtag[3].setAttribute('name','telephone');
   for (var i = 0; i < 4; i++) {
-    if (changes[i].value) {
-      text = changes[i].value;
-    } else {
-      text = changes[i].placeholder;
-    }
-    elements[i].appendChild(document.createTextNode(text));
-    changes[i].parentNode.removeChild(changes[i]);
+    elements[i].innerHTML = '';
+    elements[i].appendChild(newtag[i]);
   }
 }
 
@@ -54,12 +46,6 @@ function removeInputBoxes () {
 $('#editbtn').on('click', function () {
   createInputBoxes();
   toggleButtons();
-});
-
-$('#savebtn').on('click', function () {
-  toggleButtons();
-  removeInputBoxes();
-  toggleAlert();
 });
 
 $('#uploadbtn').on('click', function () {
