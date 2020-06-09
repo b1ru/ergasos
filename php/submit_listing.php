@@ -14,7 +14,7 @@
     $full_time = 1;
   }
   $description = $_POST['description'];
-  $maxID = mysqli_query($con,"SELECT MAX(listingID) FROM listing_details");
+  $maxID = mysqli_query($con,"SELECT ISNULL(MAX(listingID),0) FROM listing_details");
   $row = mysqli_fetch_row($maxID);
   $ID = $row[0] + 1;
   $query = "INSERT INTO listing_details (listingID,title,date_added,creator,country,city,address,telephone,email,full_time,description)
