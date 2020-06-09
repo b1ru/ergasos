@@ -60,57 +60,9 @@
 				</button>
 			</div>
 
-      <!-- CARD 1 -->
-      <div class="card">
-        <div class="card-header" id="app1">
-          Application #1
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Junior Software Developer Intership</h5>
-          <p class="card-text">
-						<ul>
-							<li>Posted by: AUTH</li>
-						</ul>
-					</p>
-          <span class="left"> <a href="./aggelia.html" class="btn btn-primary">View Details</a> </span>
-          <span class="right"> <button type = "button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Remove application</button> </span>
-        </div>
-      </div>
-
-      <!-- CARD 2 -->
-      <div class="card">
-        <div class="card-header" id="app2">
-          Application #2
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Software Engineer</h5>
-        	<p class="card-text">
-					 	<ul>
-							<li>Posted by: AUTH</li>
-						</ul>
-					</p>
-          <span class="left"> <a href="./aggelia.html" class="btn btn-primary">View Details</a> </span>
-          <span class="right"> <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Remove application</button> </span>
-        </div>
-			</div>
-
-      <!-- CARD 3 -->
-      <div class="card">
-        <div class="card-header" id="app3">
-          Application #3
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Web Designer</h5>
-          <p class="card-text">
-						<ul>
-							<li>Posted by: AUTH</li>
-						</ul>
-					</p>
-          <span class="left"> <a href="./aggelia.html" class="btn btn-primary">View Details</a> </span>
-          <span class="right"> <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Remove application</button> </span>
-        </div>
-      </div>
-    </div>
+			<?php
+				include 'php/show_applications.php';
+			?>
 
     <!-- DELETE APPLICATION MODAL -->
     <div class="modal" id="myModal" tabindex="-1" role="dialog">
