@@ -60,57 +60,9 @@
 				</button>
 			</div>
 
-      <!-- CARD 1 -->
-      <div class="card">
-        <div class="card-header" id="listing1">
-          Listing #1
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Junior Software Developer Intership</h5>
-          <p class="card-text">
-						 <ul>
-							  <li>Number of applicants: 20</li>
-						</ul>
-					</p>
-          <span class="left"> <a href="./aggelia.html" class="btn btn-primary">View Details</a> </span>
-          <span class="right"> <button type = "button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Close listing</button> </span>
-        </div>
-      </div>
-
-      <!-- CARD 2 -->
-      <div class="card">
-        <div class="card-header" id="listing2">
-          Listing #2
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Software Engineer</h5>
-          <p class="card-text">
-						<ul>
-							<li>Number of applicants: 50</li>
-						</ul>
-				 </p>
-          <span class="left"> <a href="./aggelia.html" class="btn btn-primary">View Details</a> </span>
-          <span class="right"> <button type = "button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Close listing</button> </span>
-        </div>
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="card">
-        <div class="card-header" id="listing3">
-          Listing #3
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Web Designer</h5>
-          <p class="card-text">
-						 <ul>
-							 <li>Number of applicants: 8</li>
-						 </ul>
-					</p>
-          <span class="left"> <a href="./aggelia.html" class="btn btn-primary">View Details</a> </span>
-          <span class="right"> <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Close listing</button> </span>
-        </div>
-      </div>
-    </div>
+			<?php
+				include 'php/show_listings.php';
+			?>
 
     <!-- CLOSE LISTING MODAL -->
     <div class="modal" id="myModal" tabindex="-1" role="dialog">
