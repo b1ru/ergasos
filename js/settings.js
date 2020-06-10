@@ -5,17 +5,3 @@ window.setInterval(function ToggleButton () {
     $('#deletebtn').addClass('disabled');
   }
 },200);
-
-$('#passwordform').submit(function () {
-  $('.alert').find('strong').html('Your password has changed successfully');
-  toggleAlert();
-  $('#PasswordModal').modal('hide');
-  return false;
-});
-
-$('#usernameform').submit(function () {
-  $('.alert').find('strong').html('Your username has changed successfully');
-  toggleAlert();
-  $('#UsernameModal').modal('hide');
-  return false;
-});
