@@ -1,5 +1,10 @@
 <?php 
-	$errors = array('email'=>'', 'fname'=>'','lname'=>'','username'=>'','password'=>'');
+	$con = mysqli_connect("localhost","root","","ergasos");
+	if($con === false){
+	die("ERROR: Could not connect. " . mysqli_connect_error());
+	}
+
+	$errors = array('email'=>'', 'fname'=>'','lname'=>'','username'=>'','password'=>'','confirmpass'=>'');
 	if(isset($_POST['submit'])){
 		if(empty($fname = $_POST['firstName'])){
 			$errors['fname']="Please insert a first name";
@@ -10,11 +15,35 @@
 		if(empty($email = $_POST['email'])){
 			$errors['email']="Please insert an email";
 		}
+		else{
+			$email = $_POST['email'];
+			$query = "SELECT * FROM account_details WHERE email = '$email'";
+		    $result = mysqli_query ( $con, $query );
+			if ( mysqli_num_rows ( $result )>=1 ) {
+				$errors['email']="Email already taken";
+			}
+		}
 		if(empty($username = $_POST['userName'])){
 			$errors['username']="Please insert a username";
 		}
+		else{
+			$username = $_POST['userName'];
+			$query = "SELECT * FROM login WHERE username = '$username'";
+		    $result = mysqli_query ( $con, $query );
+			if ( mysqli_num_rows ( $result )>=1 ) {
+				$errors['username']="Username already taken";
+			}
+		} 
 		if(empty($password = $_POST['password'])){
 			$errors['password']="Please insert a password";
+		}
+		if(empty($confirmpassword = $_POST['confirmpassword'])){
+			$errors['confirmpass']="Please confirm password";
+		}
+		else{
+			if($password!=$confirmpassword){
+				$errors['confirmpass']="Passwords have to match";
+			}
 		}
 		if(array_filter($errors))
 		{
@@ -22,10 +51,6 @@
 		}
 		else
 		{
-			$con = mysqli_connect("localhost","root","","ergasos");
-			if($con === false){
-			die("ERROR: Could not connect. " . mysqli_connect_error());
-			}
 			$fname = mysqli_real_escape_string($con, $_REQUEST['firstName']);
 			$lname = mysqli_real_escape_string($con, $_REQUEST['lastName']);
 			$name = $fname." ".$lname;
@@ -101,31 +126,36 @@
 				<label>First Name:</label>
 				<input class="form" type="text" name="firstName" placeholder="Enter first name" value="<?php echo $fname ?>">
 			</div>
-			<div class="red-text"><?php echo $errors['fname'];?></div>	
+			<p style="color:red; margin-bottom: 0px;"><?php echo $errors['fname'];?></p>	
 
 			<div class="p">
 				<label>Last Name:</label>
 				<input class="form" type="text" name="lastName" placeholder="Enter last name" value="<?php echo $lname ?>">
 			</div>
-			<div class="red-text"><?php echo $errors['lname'];?></div>
+			<p style="color:red; margin-bottom: 0px;"><?php echo $errors['lname'];?></p>
 
 			<div class="p">
 				<label>Email:</label>
 				<input class="form" type="Email" name="email" placeholder="Enter email" value="<?php echo $email ?>">
 			</div>
-			<div class="red-text"><?php echo $errors['email'];?></div>
+			<p style="color:red; margin-bottom: 0px;"><?php echo $errors['email'];?></p>
 
 			<div class="p">
 				<label>Username:</label>
 				<input class="form" type="text" name="userName" placeholder="Enter username" value="<?php echo $username ?>">
 			</div>
-			<div class="red-text"><?php echo $errors['username'];?></div>
+			<p style="color:red; margin-bottom: 0px;"><?php echo $errors['username'];?></p>
 
 			<div class="p">
 				<label>Password:</label>
 				<input class="form" type="password" name="password" placeholder="Enter password" value="<?php echo $password ?>">
 			</div>
-			<div class="red-text"><?php echo $errors['password'];?></div>
+			<p style="color:red; margin-bottom: 0px;"><?php echo $errors['password'];?></p>
+			<div class="p">
+				<label>Confirm Password:</label>
+				<input class="form" type="password" name="confirmpassword" placeholder="Confirm password">
+			</div>
+			<p style="color:red; margin-bottom: 0px;"><?php echo $errors['confirmpass'];?></p>
 
 		</div>
 		<div>
