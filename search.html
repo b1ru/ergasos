@@ -1,3 +1,14 @@
+<?php
+	$con = mysqli_connect("localhost","root","","ergasos");
+	if($con === false){
+	die("ERROR: Could not connect. " . mysqli_connect_error());
+	}
+	
+	mysqli_select_db($con, "ergasos");
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,17 +51,58 @@
 		</nav>
 
 	<div id="search">
-		<label>Job Type</label>
-		<select class="form" name="jobType">
-			<option value="fullTime">Full Time</option>>
-			<option value="partTime">Part Time</option>>
-		</select>
-		<input type="text" placeholder="Search..">
-		<input type="text" placeholder="Location..">
+		<form method="post"> 
+			<label>Job Type</label>
+					<select class="form" name="jobType">
+						<option value="" selected disabled hidden>Choose type</option>
+						<option value="fullTime">Full Time</option>>
+						<option value="partTime">Part Time</option>>
+					</select>
+					<input type="text" name="name" placeholder="Search..">
+					<input type="text" name="location" placeholder="Location..">
+					<input type="submit" name="search-button" value="Search">
+		</form>
 	</div>	
 
 
-	<div class="container">
+	<?php
+		if (!empty($_REQUEST['name']) && !empty($_REQUEST['location'])) {
+			$name = mysqli_real_escape_string($con, $_POST['name']);
+			$location = mysqli_real_escape_string($con, $_POST['location']);
+			$jobType = mysqli_real_escape_string($con, $_POST['jobType']);
+
+			$sql = "SELECT title, creator, city, country FROM listing_details WHERE title LIKE  '%".$name."%' AND city LIKE  '%".$location."%' AND jobType LIKE '%".$full_time."%'";
+
+			$r_query = mysql_query($sql); 
+
+
+			while ($row = mysql_fetch_array($r_query)){  
+				?>
+                 
+                		<div class="container">
+					<section id="main">
+						<a id="aggelia" href="#aggelia"> <?php echo .$row['title']; ?> </a>
+						<a id="etaireia" href="#etaireia"> <?php echo .$row['creator']; ?> </a>
+						<p id="location">
+							<?php echo .$row['city']; ?>
+							<?php echo .$row['country']; ?>
+						</p>
+					</section>
+					<form action="./aggelia.html">
+						<div>
+							<input class="button" type="submit" value="Read More">
+						</div>
+					</form>
+				</div>
+
+	<?php
+			}
+		}
+
+	?>
+
+
+	<!--<div class="container">
 		<section id="main">
 			<a id="aggelia" href="#aggelia">Junior Software Developer Intership(Thessaloniki)</a>
 			<a id="etaireia" href="#etaireia">ΕργαSOS A.E.</a>
@@ -96,6 +148,7 @@
 			</div>
 		</form>
 	</div>
+-->
 
 			<!-- Footer -->
 			<footer>
