@@ -61,13 +61,10 @@
 
 		<!-- MAIN PAGE -->
     <div class="jumbotron" id="jumbo">
-			<!-- ALERT -->
-			<div class="alert alert-success fade" role="alert">
-				<strong> Settings changed successfully! </strong>
-				<button type="button" class="close closeAlertBtn" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
+			
+			<?php
+				include "php/profile_alerts.php";
+			?>
 
 			<!-- ACCOUNT DETAILS -->
 			<form action="php/save_profile.php" method="post" enctype="multipart/form-data">
