@@ -7,7 +7,15 @@
   $row = mysqli_fetch_row($results);
   if($row[0] == $oldpassword){
     $changepassword = "UPDATE login SET password='$newpassword' WHERE userID = 1";
-    mysqli_query($con,$changepassword);
+    if(mysqli_query($con,$changepassword)) {
+      setcookie('password_change_success','true',time() + 10,'/');
+    }
+    else {
+      setcookie('password_change_success','false',time() + 10,'/');
+    }
+  }
+  else {
+    setcookie('password_change_success','false',time() + 10,'/');
   }
 
   header("Location: {$_SERVER["HTTP_REFERER"]}");

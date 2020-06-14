@@ -63,13 +63,9 @@
 
     <!-- MAIN PAGE -->
     <div>
-			<!-- ALERT -->
-			<div class="alert alert-success fade" role="alert">
-				<strong>Your password has changed successfully</strong>
-				<button type="button" class="close closeAlertBtn" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
+			<?php
+				include "php/settings_alerts.php";
+			?>
 
 			<!-- NAVIGATION -->
 			<div class="navcontainer">
@@ -124,7 +120,7 @@
 								</div>
 								<div class="form-group">
 									<label for="currentpassword">Password</label>
-									<input type="text" class="form-control" placeholder="Enter your password" name="currentpassword" required>
+									<input type="password" class="form-control" placeholder="Enter your password" name="currentpassword" required>
 								</div>
 								<button type="submit" class="btn btn-success btn-lg btn-block" id="confirmbtn">Update Username</button>
 							</form>
