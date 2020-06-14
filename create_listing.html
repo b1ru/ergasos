@@ -16,6 +16,18 @@
 	</head>
 
 	<body>
+		<script type="text/javascript">
+    	function copyTags() {
+				var tagstring = "";
+				var tags = document.getElementsByClassName('tag');
+				for (var i = 0; i < tags.length; i++) {
+					tagstring += tags[i].innerHTML + " ";
+				}
+
+				document.getElementById('tags').value = tagstring;
+    }
+		</script>
+
 		<div class="maincontainer">
 
 			<div class="content">
@@ -58,7 +70,7 @@
 			</div>
 			<hr>
 
-			<form action="php/submit_listing.php" method="post" enctype="multipart/form-data">
+			<form action="php/submit_listing.php" onsubmit="copyTags()" method="post" enctype="multipart/form-data">
 				<h3 id="CInfo"> Company Info </h3>
 				<div class="form-row">
 					<div class="col text-center">
@@ -123,6 +135,7 @@
 					<button type="button" class="btn btn-dark" id="addtagbtn">Add</button>
 					<!-- span for tags -->
 					<span id="tagspan"></span>
+					<input type="hidden" name="tags" id="tags">
 				</div>
 				<button type="submit" class="btn btn-primary my-1">Submit Listing</button>
 			</form>

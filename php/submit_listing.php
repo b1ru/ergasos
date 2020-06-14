@@ -14,8 +14,16 @@
     $full_time = 1;
   }
   $description = $_POST['description'];
-  $query = "INSERT INTO listing_details (title,date_added,creator,country,city,address,telephone,email,full_time,description)
-            VALUES('$title',CURRENT_DATE(),'$creator','$country','$city','$address','$telephone','$email',$full_time,'$description')";
+  $tags = $_POST['tags'];
+  if($tags == '') {
+    $query = "INSERT INTO listing_details (title,date_added,creator,country,city,address,telephone,email,full_time,description,tags)
+              VALUES('$title',CURRENT_DATE(),'$creator','$country','$city','$address','$telephone','$email',$full_time,'$description',NULL)";
+  }
+
+  else {
+  $query = "INSERT INTO listing_details (title,date_added,creator,country,city,address,telephone,email,full_time,description,tags)
+            VALUES('$title',CURRENT_DATE(),'$creator','$country','$city','$address','$telephone','$email',$full_time,'$description','$tags')";
+  }
 
   mysqli_query($con,$query);
   mysqli_query($con,"INSERT INTO listings (userID) VALUES(1)");
