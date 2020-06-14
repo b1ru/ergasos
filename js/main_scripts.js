@@ -6,7 +6,6 @@ $(document).ready( function toggleAlert () {
   setTimeout(function () {
     $('.alert').removeClass('show');
   }, 2000);
-  return false;
 });
 
 $('.closeAlertBtn').on('click', function () {
