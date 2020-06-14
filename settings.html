@@ -144,7 +144,7 @@
             	</button>
           	</div>
           	<div class="modal-body">
-            	<form action="php/change_password.php" method="post" enctype="multipart/form-data" id="passwordform">
+            	<form action="php/change_password.php" onsubmit="return validateForm()" method="post" enctype="multipart/form-data" id="passwordform" name="passwordform">
               	<div class="form-group">
                 	<label for="oldpassword">Old Password</label>
 	                <input type="password" class="form-control" placeholder="Enter your old password" name="oldpassword" required>
@@ -186,7 +186,7 @@
             		<input type="text" class="form-control" id="inputcaptcha" placeholder="Enter the text above">
           		</div>
           		<div class="modal-footer">
-            		<button role="sumbit" class="btn btn-danger btn-lg btn-block disabled" id="deletebtn">Confirm</a>
+            		<button role="sumbit" class="btn btn-danger btn-lg btn-block" id="deletebtn" disabled="true">Confirm</a>
           		</div>
 						</form>
         	</div>
