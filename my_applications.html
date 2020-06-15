@@ -52,15 +52,9 @@
 
     <!-- MAIN PAGE -->
     <div class="jumbotron" id = "jumbo">
-			<!-- ALERT -->
-			<div class = "alert alert-primary fade" role = "alert">
-				<strong> Your application has been deleted </strong>
-				<button type="button" class="close closeAlertBtn"aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
 
 			<?php
+				include 'php/applications_alerts.php';
 				include 'php/show_applications.php';
 			?>
 
@@ -80,7 +74,10 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal" id="confirmbtn">Confirm</button>
+						<form action="php/delete_application.php" method="post" enctype="multipart/form-data">
+							<input type="hidden" name="listingname" id="listingname">
+            	<button type="submit button" class="btn btn-danger" id="confirmbtn">Confirm</button>
+						</form>
           </div>
         </div>
       </div>
