@@ -20,4 +20,26 @@
     }
     setcookie("listing_delete_success","",time() - 3600,'/');
   }
+
+  if(isset($_COOKIE['listing_submit_success'])) {
+    if($_COOKIE['listing_submit_success'] == 'true') {
+      echo '<!-- ALERT -->
+      <div class="alert alert-success fade" role="alert">
+      <strong>Your listing has been created.</strong>
+      <button type="button" class="close closeAlertBtn" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>';
+    }
+    else {
+      echo '<!-- ALERT -->
+      <div class="alert alert-danger fade" role="alert">
+      <strong>Something went wrong while submiting your listing.Please try again.</strong>
+      <button type="button" class="close closeAlertBtn" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>';
+    }
+    setcookie("listing_submit_success","",time() - 3600,'/');
+  }
 ?>

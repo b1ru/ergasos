@@ -1,5 +1,6 @@
 <?php
   $con = mysqli_connect("localhost","root","","ergasos");
+  $ok = 1;
   $title = $_POST['title'];
   $creator = $_POST['name'];
   $country = $_POST['country'];
@@ -26,6 +27,19 @@
   }
 
   mysqli_query($con,$query);
+  if (mysqli_affected_rows($con) == 0 ) {
+    $ok = 0;
+  }
   mysqli_query($con,"INSERT INTO listings (userID) VALUES(1)");
+  if (mysqli_affected_rows($con) == 0 ) {
+    $ok = 0;
+  }
+
+  if($ok == 1) {
+    setcookie("listing_submit_success","true",time() + 10,"/");
+  }
+  else {
+    setcookie("listing_submit_success","false",time() + 10,"/");
+  }
   header("Location: ../my_listings.html");
 ?>
