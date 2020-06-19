@@ -18,20 +18,15 @@ html {
 }
 
 #register-link {
-	margin-top: -84px;
+	margin-top: -45px;
 	text-decoration: underline;
 }
 
-
-#remember-me-choice {
-	display: flex;
-	align-items: center;
+#log-in-btn {
+	margin-top:35px;
 }
 
-#remember-me {
-	margin-bottom : 5px;
-	margin-left: 7px;
-}
+
 
 /* The folowing are needed on all pages
 	for the navbar and the footer
