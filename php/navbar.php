@@ -44,8 +44,8 @@
   		</div>
 		</nav>';
 
-	} 
-	else 
+	}
+	else
 	{
 		echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<a href="./index.html">
@@ -73,8 +73,8 @@
   	  	<a class="dropdown-item" href="./my_listings.html">My Listings</a>
   	  	<a class="dropdown-item" href="./settings.html">Settings</a>
 				<div class="dropdown-divider"></div>
-				
-			<form id="logout-link" action="index.html" method="post" >
+
+			<form id="logout-link" action="php/logout.php" method="post" >
     		<input type="submit" class="dropdown-item" name="changeNavbar" value="Logout"/>
 			</form>
   		</div>
