@@ -17,8 +17,17 @@
 	<body>
 
 		<?php
+			if (session_status() == PHP_SESSION_NONE) {
+				session_start();
+			}
+			if($_SESSION['logged_in'] == false) {
+				header("Location: ./sign-in.html");
+			}
+			else {
+				$id = $_SESSION['id'];
+			}
 			$con = mysqli_connect("localhost","root","","ergasos");
-			$results = mysqli_query($con, "SELECT * FROM login WHERE userID = 1");
+			$results = mysqli_query($con, "SELECT * FROM login WHERE userID = '$id'");
 			$row = mysqli_fetch_row($results);
 			$username = $row[1];
 			$password = $row[2];
