@@ -1,12 +1,19 @@
 <?php
+  session_start();
+  if(!isset($_SESSION['id'])){
+    header("Location: ./sign-in.html");
+  }
+  else {
+    $id = $_SESSION['id'];
+  }
   $con = mysqli_connect("localhost","root","","ergasos");
   $oldpassword = $_POST['oldpassword'];
   $newpassword = $_POST['newpassword'];
-  $passwordquery = "SELECT password FROM login WHERE userID = 1";
+  $passwordquery = "SELECT password FROM login WHERE userID = '$id'";
   $results = mysqli_query($con,$passwordquery);
   $row = mysqli_fetch_row($results);
   if($row[0] == $oldpassword){
-    $changepassword = "UPDATE login SET password='$newpassword' WHERE userID = 1";
+    $changepassword = "UPDATE login SET password='$newpassword' WHERE userID = '$id'";
     if(mysqli_query($con,$changepassword)) {
       setcookie('password_change_success','true',time() + 10,'/');
     }

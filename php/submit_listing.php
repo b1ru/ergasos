@@ -1,4 +1,11 @@
 <?php
+  session_start();
+  if(!isset($_SESSION['id'])){
+    header("Location: ./sign-in.html");
+  }
+  else {
+    $id = $_SESSION['id'];
+  }
   $con = mysqli_connect("localhost","root","","ergasos");
   $ok = 1;
   $title = $_POST['title'];
@@ -30,7 +37,7 @@
   if (mysqli_affected_rows($con) == 0 ) {
     $ok = 0;
   }
-  mysqli_query($con,"INSERT INTO listings (userID) VALUES(1)");
+  mysqli_query($con,"INSERT INTO listings (userID) VALUES('$id')");
   if (mysqli_affected_rows($con) == 0 ) {
     $ok = 0;
   }

@@ -1,11 +1,18 @@
 <?php
+  session_start();
+  if(!isset($_SESSION['id'])){
+    header("Location: ./sign-in.html");
+  }
+  else {
+    $id = $_SESSION['id'];
+  }
     $con = mysqli_connect("localhost","root","","ergasos");
 
     $ok = 1;
     $title = $_POST['listingname'];
     $query = "SELECT listings.listingID
     FROM listings INNER JOIN listing_details ON listings.listingID = listing_details.listingID
-    WHERE listings.userID = '1' AND listing_details.title = '$title'";
+    WHERE listings.userID = '$id' AND listing_details.title = '$title'";
 
     $results = mysqli_query($con,$query);
     if(!$results) {
@@ -40,6 +47,6 @@
     else {
       setcookie("listing_delete_success","false",time() + 10,"/");
     }
-    
+
     header("Location: {$_SERVER["HTTP_REFERER"]}");
 ?>

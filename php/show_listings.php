@@ -1,10 +1,17 @@
 <?php
+session_start();
+if(!isset($_SESSION['id'])){
+  header("Location: ./sign-in.html");
+}
+else {
+  $id = $_SESSION['id'];
+}
 $con = mysqli_connect("localhost","root","","ergasos");
 $query =
 "SELECT listing_details.title,COUNT(applications.id)
 FROM listings INNER JOIN listing_details ON listings.listingID = listing_details.listingID
 LEFT JOIN applications ON listing_details.listingID = applications.listingID
-WHERE listings.userID = 1
+WHERE listings.userID = '$id'
 GROUP BY listing_details.title
 ORDER BY listing_details.listingID";
 $result = mysqli_query($con,$query);

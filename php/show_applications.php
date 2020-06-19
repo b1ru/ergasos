@@ -1,9 +1,16 @@
 <?php
+  session_start();
+  if(!isset($_SESSION['id'])){
+    header("Location: ./sign-in.html");
+  }
+  else {
+    $id = $_SESSION['id'];
+  }
   $con = mysqli_connect("localhost","root","","ergasos");
   $query =
   "SELECT listing_details.title,listing_details.creator
   FROM applications INNER JOIN listing_details ON applications.listingID = listing_details.listingID
-  WHERE applications.userID = 1";
+  WHERE applications.userID = '$id'";
   $result = mysqli_query($con,$query);
   $num = mysqli_num_rows($result);
   for($i = 0; $i < $num; $i++){
