@@ -12,5 +12,8 @@
   $query = "DELETE FROM login WHERE userID = '$id'";
   mysqli_query($con,$query);
 
-  header('Location: ../index.html');
+  $query = "DELETE FROM account_details WHERE userID = '$id'";
+  mysqli_query($con,$query);
+
+  require("logout.php");
 ?>
