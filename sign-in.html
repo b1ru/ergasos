@@ -22,12 +22,14 @@
 				$_SESSION['id']=$row['userID'];
 				mysqli_close($con);	
 			    header('Location: index.html');
+					
+					// change navbar
+					$_SESSION['logged_in'] = true;
 			}
 			else{
 				$error="Wrong combination of Username and Password";
 			}
 		}
-
 	}
 
 ?>

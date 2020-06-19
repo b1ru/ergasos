@@ -7,7 +7,11 @@
 		$_SESSION['logged_in'] = false;
 	}
 
-	$_SESSION['logged_in'] = false;
+	if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['changeNavbar']))
+  {
+    $_SESSION['logged_in'] = false;
+  }
+
 
 	if ($_SESSION['logged_in'] == false) {
 
@@ -69,10 +73,14 @@
   	  	<a class="dropdown-item" href="./my_listings.html">My Listings</a>
   	  	<a class="dropdown-item" href="./settings.html">Settings</a>
 				<div class="dropdown-divider"></div>
-  	  	<a id="logout-link" class="dropdown-item" href="#">Logout</a>
+				
+			<form id="logout-link" action="index.html" method="post" >
+    		<input type="submit" class="dropdown-item" name="changeNavbar" value="Logout"/>
+			</form>
   		</div>
 			</div>
   		</div>
 		</nav>';
 }
+
 ?>
