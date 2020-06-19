@@ -7,10 +7,10 @@
     $id = $_SESSION['id'];
   }
   $con = mysqli_connect("localhost","root","","ergasos");
-  $name = $_POST['name'];
-  $address = $_POST['address'];
-  $email = $_POST['email'];
-  $telephone = $_POST['telephone'];
+  $name = mysqli_real_escape_string($con,$_POST['name']);
+  $address = mysqli_real_escape_string($con,$_POST['address']);
+  $email = mysqli_real_escape_string($con,$_POST['email']);
+  $telephone = mysqli_real_escape_string($con,$_POST['telephone']);
   $query = "UPDATE account_details SET name='$name',address='$address',email='$email',telephone='$telephone' WHERE userID = '$id'";
   if(mysqli_query($con,$query)) {
     setcookie("info_change_success","true",time() + 10,"/");

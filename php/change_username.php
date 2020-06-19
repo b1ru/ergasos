@@ -7,8 +7,8 @@
     $id = $_SESSION['id'];
   }
   $con = mysqli_connect("localhost","root","","ergasos");
-  $newusername = $_POST['newusername'];
-  $currentpassword = $_POST['currentpassword'];
+  $newusername = mysqli_real_escape_string($con,$_POST['newusername']);
+  $currentpassword = mysqli_real_escape_string($con,$_POST['currentpassword']);
   $passwordquery = "SELECT password FROM login WHERE userID = '$id'";
   $results = mysqli_query($con,$passwordquery);
   $row = mysqli_fetch_row($results);

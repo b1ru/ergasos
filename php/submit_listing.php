@@ -8,13 +8,13 @@
   }
   $con = mysqli_connect("localhost","root","","ergasos");
   $ok = 1;
-  $title = $_POST['title'];
-  $creator = $_POST['name'];
-  $country = $_POST['country'];
-  $city = $_POST['city'];
-  $address = $_POST['address'];
-  $telephone = $_POST['telephone'];
-  $email = $_POST['email'];
+  $title = mysqli_real_escape_string($con,$_POST['title']);
+  $creator = mysqli_real_escape_string($con,$_POST['name']);
+  $country = mysqli_real_escape_string($con,$_POST['country']);
+  $city = mysqli_real_escape_string($con,$_POST['city']);
+  $address = mysqli_real_escape_string($con,$_POST['address']);
+  $telephone = mysqli_real_escape_string($con,$_POST['telephone']);
+  $email = mysqli_real_escape_string($con,$_POST['email']);
   if($_POST['hours'] == 2){
     $full_time = 0;
   }
