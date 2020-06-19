@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2020 at 09:58 PM
+-- Generation Time: Jun 09, 2020 at 06:42 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `account_details` (
   `userID` int(10) NOT NULL,
   `name` varchar(45) NOT NULL,
-  `address` varchar(45) NOT NULL,
+  `address` varchar(45) DEFAULT NULL,
   `email` varchar(45) NOT NULL,
-  `telephone` varchar(45) NOT NULL,
+  `telephone` varchar(45) DEFAULT NULL,
   `cv` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -76,8 +76,7 @@ CREATE TABLE `listing_details` (
   `telephone` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `full_time` tinyint(1) NOT NULL,
-  `description` varchar(500) NOT NULL,
-  `tags` varchar(100) DEFAULT NULL
+  `description` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -134,31 +133,31 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `account_details`
 --
 ALTER TABLE `account_details`
-  MODIFY `userID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `userID` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `applications`
 --
 ALTER TABLE `applications`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `listings`
 --
 ALTER TABLE `listings`
-  MODIFY `listingID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `listingID` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `listing_details`
 --
 ALTER TABLE `listing_details`
-  MODIFY `listingID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `listingID` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `userID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `userID` int(10) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
