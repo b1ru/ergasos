@@ -32,6 +32,12 @@
 			$email = $row[3];
 			$telephone = $row[4];
 			$cv = $row[5];
+			if($cv === NULL) {
+				$href = '';
+			}
+			else {
+				$href = 'href=' . $cv;
+			}
 		?>
 
 		<!-- NAVIGATION BAR -->
@@ -86,7 +92,7 @@
         <p id="CV">
 					<span class="left">
 						<img src="images/CV.png">
-						<a href="<?php echo $cv ?>" download>Download CV</a>
+						<a <?php echo $href ?> download>Download CV</a>
 					</span>
 					<span class="right">
 						<img src="images/upload.png">
