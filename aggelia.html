@@ -14,8 +14,14 @@
 		<?php require("php/navbar.php"); ?>
 
 		<?php 
+		$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+		if (is_null($id)) {
+		} 
+		else if (false === $id) {
+		    
+		}
 		$con = mysqli_connect("localhost","root","","ergasos");
-		$query="SELECT * FROM listing_details WHERE listingID=1";
+		$query="SELECT * FROM listing_details WHERE listingID=$id";
 		$result=mysqli_query($con,$query);
 		$row = mysqli_fetch_assoc($result);
 		mysqli_free_result($result);
