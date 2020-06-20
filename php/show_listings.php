@@ -10,7 +10,7 @@ else {
 }
 $con = mysqli_connect("localhost","root","","ergasos");
 $query =
-"SELECT listing_details.title,COUNT(applications.id)
+"SELECT listing_details.title,COUNT(applications.id),listing_details.listingID
 FROM listings INNER JOIN listing_details ON listings.listingID = listing_details.listingID
 LEFT JOIN applications ON listing_details.listingID = applications.listingID
 WHERE listings.userID = '$id'
@@ -32,7 +32,7 @@ for($i = 0; $i < $num; $i++){
             <li>Number of applicants: '.$row[1].'</li>
         </ul>
       </p>
-      <span class="left"> <a href="./aggelia.html" class="btn btn-primary">View Details</a> </span>
+      <span class="left"> <a href="./aggelia.html?id='.$row[2].'" class="btn btn-primary">View Details</a> </span>
       <span class="right"> <button type = "button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Close listing</button> </span>
     </div>
   </div>';

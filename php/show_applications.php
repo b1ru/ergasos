@@ -10,7 +10,7 @@
   }
   $con = mysqli_connect("localhost","root","","ergasos");
   $query =
-  "SELECT listing_details.title,listing_details.creator
+  "SELECT listing_details.title,listing_details.creator,listing_details.listingID
   FROM applications INNER JOIN listing_details ON applications.listingID = listing_details.listingID
   WHERE applications.userID = '$id'";
   $result = mysqli_query($con,$query);
@@ -29,7 +29,7 @@
             <li>Posted by: '.$row[1].'</li>
           </ul>
         </p>
-        <span class="left"> <a href="./aggelia.html" class="btn btn-primary">View Details</a> </span>
+        <span class="left"> <a href="./aggelia.html?id='.$row[2].'" class="btn btn-primary">View Details</a> </span>
         <span class="right"> <button type = "button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Remove application</button> </span>
       </div>
     </div>';
