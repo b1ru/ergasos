@@ -48,14 +48,15 @@
                  
                 <div class="container">
 					<section id="main">
-						<a id="aggelia" href="#aggelia"> <?php echo $row['title']; ?> </a>
+						<?php echo '<a id="aggelia" href="./aggelia.html?id='.$row['listingID'].'">'?> <?php echo $row['title']; ?> </a>
 						<a id="etaireia" href="#etaireia"> <?php echo $row['creator']; ?> </a>
 						<p id="location">
 							<?php echo $row['city']; ?>
 							<?php echo $row['country']; ?>
 						</p>
+						<input id="rowid" type="hidden" name="rowid" value="<?php echo $row['listingID']; ?>" />
 					</section>
-					<form action="./aggelia.html">
+					<?php echo '<form action="./aggelia.html?id='.$row['listingID'].'" method="post">'?>
 						<div>
 							<input class="button" type="submit" value="Read More">
 						</div>
@@ -81,7 +82,7 @@
                  
                 <div class="container">
 					<section id="main">
-						<a id="aggelia" href="#aggelia"> <?php echo $row['title']; ?> </a>
+						<?php echo '<a id="aggelia" href="./aggelia.html?id='.$row['listingID'].'">'?> <?php echo $row['title']; ?> </a>
 						<a id="etaireia" href="#etaireia"> <?php echo $row['creator']; ?> </a>
 						<p id="location">
 							<?php echo $row['city']; ?>
@@ -115,7 +116,7 @@
                  
                 <div class="container">
 					<section id="main">
-						<a id="aggelia" href="#aggelia"> <?php echo $row['title']; ?> </a>
+						<?php echo '<a id="aggelia" href="./aggelia.html?id='.$row['listingID'].'">'?> <?php echo $row['title']; ?> </a>
 						<a id="etaireia" href="#etaireia"> <?php echo $row['creator']; ?> </a>
 						<p id="location">
 							<?php echo $row['city']; ?>
@@ -148,7 +149,7 @@
                  
                 <div class="container">
 					<section id="main">
-						<a id="aggelia" href="#aggelia"> <?php echo $row['title']; ?> </a>
+						<?php echo '<a id="aggelia" href="./aggelia.html?id='.$row['listingID'].'">'?> <?php echo $row['title']; ?> </a>
 						<a id="etaireia" href="#etaireia"> <?php echo $row['creator']; ?> </a>
 						<p id="location">
 							<?php echo $row['city']; ?>
