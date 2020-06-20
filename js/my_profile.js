@@ -1,18 +1,7 @@
-function saveButtonIsShown () {
-  return document.getElementById('savebtn').style.display == 'inline';
-}
-
-
 function toggleButtons () {
-  if(saveButtonIsShown()) {
-    document.getElementById('savebtn').style.display = 'none';
-    document.getElementById('editbtn').style.display = 'inline-block';
-    document.getElementById('pen_icon').style.display = 'inline-block';
-  } else {
     document.getElementById('savebtn').style.display = 'inline-block';
     document.getElementById('editbtn').style.display = 'none';
     document.getElementById('pen_icon').style.display = 'none';
-  }
 }
 
 function createInput (value) {

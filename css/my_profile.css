@@ -30,14 +30,6 @@ h4{
   display: none;
 }
 
-#jumbo {
-  background-color: rgb(255, 255, 255);
-  position: relative;
-  width: 50%;
-  left: 25%;
-}
-
 #head {
   padding-right: 1%;
 }
-

@@ -18,13 +18,6 @@ body {
 	background-color: #eee;
 }
 
-#alertbanner {
-  width: 100%;
-  height: 35px;
-  padding: 0;
-  margin: 0;
-}
-
 .alert {
 	position: absolute;
 	width: 100%;
