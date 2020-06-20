@@ -2,3 +2,8 @@
   background-color: rgba(189, 225, 230,0.6);
   margin-bottom: 30px;
 }
+
+#tabContent {
+  width: 100%;
+  background-color: #eee;
+}

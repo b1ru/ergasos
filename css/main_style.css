@@ -41,6 +41,16 @@ body {
 	padding-bottom: 25px;
 }
 
+#tabContent {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 3%;
+  padding-left: 3%;
+  padding-bottom: 3%;
+  padding-right: 3%;
+  background-color: rgb(255, 255, 255);
+}
+
 
 /* The folowing are needed on all pages
 	for the navbar and the footer
