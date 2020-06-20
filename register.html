@@ -61,6 +61,11 @@
 			$sql2 = "INSERT INTO account_details (name, email) VALUES ('$name', '$email')";
 			if(mysqli_query($con, $sql1) and mysqli_query($con, $sql2)){
 				mysqli_close($con);	
+					
+				if (session_status() == PHP_SESSION_NONE) {
+    			session_start();
+				}
+					$_SESSION['logged_in'] = true;
 			    header('Location: index.html');
 			} else{
 			    echo 'query error'.mysqli_error($con);
