@@ -26,13 +26,14 @@
 		$row = mysqli_fetch_assoc($result);
 		mysqli_free_result($result);
 		mysqli_close($con);
+
 		?>
 
 		<div class="box2"><br>
 			<p class="Titlos"> Application Information</p><br><br>
 			<p style="border:3px; border-style:solid; border-radius: 15px; border-color:white; padding: 10px; margin-top:-30px; margin-left:-5px; font-size:18px; background: white; width: 90vw;">
 				<span style="font-size: 30px;"><?php echo $row["title"];?></span><br>
-				<span class="category">29/5/1453</span><br>
+				<span class="category"><?php echo $row["date_added"];?></span><br>
 				<span class="category">Country:</span> <?php echo $row["country"];?><br>
 				<span class="category">City:</span> <?php echo $row["city"];?><br>
 				<span class="category">Address:</span> <?php echo $row["address"];?><br>
@@ -60,7 +61,10 @@
 		      </div>
 		      	<div class="modal-footer">
 		        	<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-		        	<button type="button" class="btn btn-primary">Apply!</button>
+		        	<form action="php/listing_apply.php" method="post">
+		        		<?php $_SESSION['applyID']=$id;?>
+		        		<input type="submit" value="Submit">
+					</form> 
 			      </div>
 			    </div>
 			  </div>
