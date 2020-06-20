@@ -25,6 +25,11 @@ body {
   margin: 0;
 }
 
+.alert {
+	position: absolute;
+	width: 100%;
+}
+
 .maincontainer {
 	position: relative;
 	width: 100%;
