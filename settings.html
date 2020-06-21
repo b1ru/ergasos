@@ -27,15 +27,9 @@
 				$id = $_SESSION['id'];
 			}
 			$con = mysqli_connect("localhost","root","","ergasos");
-			$results = mysqli_query($con, "SELECT * FROM login WHERE userID = '$id'");
+			$results = mysqli_query($con, "SELECT username FROM login WHERE userID = '$id'");
 			$row = mysqli_fetch_row($results);
-			$username = $row[1];
-			$password = $row[2];
-			$passwordletters = strlen($password);
-			$hiddenpassword = '';
-			for($i = 0; $i < $passwordletters; $i++){
-				$hiddenpassword = $hiddenpassword . '*';
-			}
+			$username = $row[0];
 		?>
 
 
@@ -72,7 +66,7 @@
 					<h3>Password</h3>
 					<hr>
 					<div>
-						<p class="label"><strong>Current password:</strong> <?php echo $hiddenpassword ?></p>
+						<p class="label"><strong>Current password:</strong> ******** </p>
         		<button type="button" class="btn btn-primary changebtn" data-toggle="modal" data-target="#PasswordModal">Change Password</button>
 					</div>
 
