@@ -3,9 +3,16 @@
 	if($con === false){
 	die("ERROR: Could not connect. " . mysqli_connect_error());
 	}
-	
-	mysqli_select_db($con, "ergasos");
-
+	if (isset($_POST['search-button']))
+	{
+		$name=$_POST['name'];
+		if(!isset($_POST['name'])){$name='';}
+		$location=$_POST['location'];
+		if(!isset($_POST['name'])){$location='';}
+		$type=$_POST['jobType'];
+		$link="search.html?name=".$name."&location=".$location."&type=".$type."";
+		header('Location: '.$link);
+	}
 ?>
 
 
@@ -37,34 +44,25 @@
 	</div>	
 
 	<?php
-		if (!isset($_POST['name']) && !isset($_POST['location'])) {
+		$name=filter_input(INPUT_GET, 'name');
+		$location=filter_input(INPUT_GET, 'location');
+		$type=filter_input(INPUT_GET, 'type', FILTER_SANITIZE_SPECIAL_CHARS);
+		if ($name=='' && $location=='') {
 			$sql = "SELECT * FROM listing_details";
 			$r_query = mysqli_query($con,$sql); 
 			$q_results= mysqli_num_rows($r_query);
 		}
-		elseif (isset($_POST['name']) && isset($_POST['location'])) {
-			$name = mysqli_real_escape_string($con, $_POST['name']);
-			$location = mysqli_real_escape_string($con, $_POST['location']);
-			$type = mysqli_real_escape_string($con, $_POST['jobType']);
-
+		elseif ($name!='' && $location!='') {
 			$sql = "SELECT * FROM listing_details WHERE title LIKE  '%$name%' AND city LIKE  '%$location%' AND full_time=$type";
 			$r_query = mysqli_query($con,$sql); 
 			$q_results= mysqli_num_rows($r_query);
 		}
-		elseif (isset($_POST['name']) && !isset($_POST['location'])) {
-			$name = mysqli_real_escape_string($con, $_POST['name']);
-			$location = mysqli_real_escape_string($con, $_POST['location']);
-			$type = mysqli_real_escape_string($con, $_POST['jobType']);
-
+		elseif ($name!='' && $location=='') {
 			$sql = "SELECT * FROM listing_details WHERE title LIKE  '%$name%' AND full_time=$type";
 			$r_query = mysqli_query($con,$sql); 
 			$q_results= mysqli_num_rows($r_query);
 		}
-		elseif (!isset($_POST['name']) && isset($_POST['location'])) {
-			$name = mysqli_real_escape_string($con, $_POST['name']);
-			$location = mysqli_real_escape_string($con, $_POST['location']);
-			$type = mysqli_real_escape_string($con, $_POST['jobType']);
-
+		elseif ($name=='' && $location!='') {
 			$sql = "SELECT * FROM listing_details WHERE city LIKE '%$location%' AND full_time=$type";
 			$r_query = mysqli_query($con,$sql); 
 			$q_results= mysqli_num_rows($r_query);
