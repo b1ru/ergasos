@@ -18,11 +18,15 @@ GROUP BY listing_details.title
 ORDER BY listing_details.listingID";
 $result = mysqli_query($con,$query);
 $num = mysqli_num_rows($result);
+if($num==0){
+    echo '<h1 style="text-align:center"> <br><br>You have not listed any jobs yet. Get started by creating one! </h1>';
+  }
+else{
 for($i = 0; $i < $num; $i++){
   $row = mysqli_fetch_row($result);
 
   echo '<div class="card">
-    <div class="card-header" id="'.$row[2].'">
+    <div class="card-header" id="listing'.($i+1).'">
       Listing #'.($i+1).'
     </div>
     <div class="card-body">
@@ -37,5 +41,6 @@ for($i = 0; $i < $num; $i++){
     </div>
   </div>';
 
+  }
 }
 ?>
