@@ -34,6 +34,7 @@
 		<form method="post"> 
 			<label>Job Type</label>
 					<select class="form" name="jobType">
+						<option value="2">Both</option>
 						<option value="1">Full Time</option>>
 						<option value="0">Part Time</option>>
 					</select>
@@ -49,24 +50,21 @@
 		$type=filter_input(INPUT_GET, 'type', FILTER_SANITIZE_SPECIAL_CHARS);
 		if ($name=='' && $location=='') {
 			$sql = "SELECT * FROM listing_details";
-			$r_query = mysqli_query($con,$sql); 
-			$q_results= mysqli_num_rows($r_query);
 		}
 		elseif ($name!='' && $location!='') {
-			$sql = "SELECT * FROM listing_details WHERE title LIKE  '%$name%' AND city LIKE  '%$location%' AND full_time=$type";
-			$r_query = mysqli_query($con,$sql); 
-			$q_results= mysqli_num_rows($r_query);
+			$sql = "SELECT * FROM listing_details WHERE title LIKE  '%$name%' AND city LIKE  '%$location%'";
 		}
 		elseif ($name!='' && $location=='') {
-			$sql = "SELECT * FROM listing_details WHERE title LIKE  '%$name%' AND full_time=$type";
-			$r_query = mysqli_query($con,$sql); 
-			$q_results= mysqli_num_rows($r_query);
+			$sql = "SELECT * FROM listing_details WHERE title LIKE  '%$name%'";
 		}
 		elseif ($name=='' && $location!='') {
-			$sql = "SELECT * FROM listing_details WHERE city LIKE '%$location%' AND full_time=$type";
-			$r_query = mysqli_query($con,$sql); 
-			$q_results= mysqli_num_rows($r_query);
+			$sql = "SELECT * FROM listing_details WHERE city LIKE '%$location%'";
 		}
+		if ($name!='' && $location!='' && $type!=2){
+			$sql=$sql." AND full_time=$type";
+		}
+		$r_query = mysqli_query($con,$sql); 
+		$q_results= mysqli_num_rows($r_query);
 		if ($q_results > 0) {
 			while ($row = mysqli_fetch_assoc($r_query)){  
 			?>
