@@ -44,7 +44,22 @@
 				<span class="category">Description:</span> <?php echo $row["description"];?>
 				</span>
 			</p>
-			<?php if(isset($_SESSION['id'])){?>
+			<?php
+			$con = mysqli_connect("localhost","root","","ergasos");
+			$userID=$_SESSION['id'];
+			$query1="SELECT * FROM applications WHERE listingID='$id' AND userID='$userID'";
+			$result1=mysqli_query($con,$query1);
+			$query2="SELECT * FROM listings WHERE listingID='$id' AND userID='$userID'";
+			$result2=mysqli_query($con,$query2);
+			if(mysqli_num_rows ( $result1)>=1){?>
+			<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter" disabled>
+  				You've already applied for this job!
+			</button>
+			<?php } elseif(mysqli_num_rows ( $result2)>=1){?>
+				<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter" disabled>
+  				This is a listing you've created!
+			</button>
+			<?php } elseif(isset($_SESSION['id'])){?>
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
   				Apply Now!
 			</button>
