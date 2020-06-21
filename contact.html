@@ -1,3 +1,36 @@
+<?php 
+	if(isset($_POST['submit'])){
+		$error=0;
+		$name=$_POST['firstname'];
+		$email=$_POST['email'];
+		$subject=$_POST['subject'];
+		$complaint=$_POST['complaint'];
+		if(empty($_POST['firstname'])){
+			$name='anonymous';
+		}
+		if(empty($_POST['complaint'])){
+			$error=1;
+		}
+		else{
+			$message="From ".$name.", ".$email.": ".$subject."\n ".$complaint;
+			$con = mysqli_connect("localhost","root","","ergasos");
+			if($con === false){
+			die("ERROR: Could not connect. " . mysqli_connect_error());
+			}
+			$query="INSERT INTO contact_forms (messages) VALUES ('$message')";
+			if(mysqli_query($con, $query)){
+					mysqli_close($con);	
+				    header('Location: index.html');
+				}
+		}
+	}
+	else{
+		$error=0;
+	}
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,15 +54,23 @@
 			Website developed by: <ul style="border:3px; border-style:solid; border-radius: 15px; border-color:white; padding: 10px; margin-top:-30px; margin-left:-5px; font-size:18px; background: white;width:60%; margin:0 auto; margin-top:-25px; list-style: inside; display: table; padding-left: 23.5%"><li>Andreas Skolidis</li><li>Axilleas Toumpas</li><li>Basilis Tsekouras</li><li>Nikos Tsioumanis</li></ul>
 		</p>
 		<p style="color:black; font: 28px normal Arial, Helvetica, sans-serif; text-align:center;"> Contact Us</p>
+		
+		<form action="" method="POST">
 		<p style="border:3px; border-style:solid; border-radius: 15px; border-color:white; padding: 10px; margin-top:-30px; margin-left:-5px; font-size:18px; background: white;width:60%; text-align: left; margin:auto; ">
 			<label for="fname">First Name</label>
     		<input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
-    		<label for="lname">Email</label>
+    		<label for="email">Email</label>
     		<input type="text" id="email" name="email" placeholder="Your email..">
     		<label for="subject">Subject</label>
-    		<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-    		<input class="submit submitbutton" type="submit" value="Submit">
+    		<input type="text" id="subject" name="subject" placeholder="Line of Inquiry">
+    		<label for="Complaint">Complaint or Suggestion</label>
+    		<textarea id="Complaint" name="complaint" placeholder="Write something.." style="height:200px"></textarea>
+    		<?php if($error==1){?>
+    		<label for="error"><?php echo 'You have to fill out a complaint';?></label><br>
+    		<?php }?>
+    		<input class="submit" type="submit" name="submit" value="Submit">
     	</p>
+    	</form>
 	</div>
 </div>
 
