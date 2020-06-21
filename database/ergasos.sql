@@ -89,7 +89,7 @@ CREATE TABLE `listing_details` (
 CREATE TABLE `login` (
   `userID` int(10) NOT NULL,
   `username` varchar(45) NOT NULL,
-  `password` varchar(45) NOT NULL
+  `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
