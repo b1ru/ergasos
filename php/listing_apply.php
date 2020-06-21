@@ -5,7 +5,7 @@
 	unset($_SESSION['applyID']);
 	$con = mysqli_connect("localhost","root","","ergasos");
 	$query="INSERT INTO applications (userID,listingID) VALUES ('$userID','$applicationid')";
-	$dupecheck="SELECT * FROM applications WHERE userID = '$userID'";
+	$dupecheck="SELECT * FROM applications WHERE userID = '$userID' AND listingID=$applicationid";
 	$res=mysqli_query ( $con, $dupecheck );
 	if(mysqli_num_rows ( $res )>=1)
 	{
