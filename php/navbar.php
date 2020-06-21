@@ -7,11 +7,16 @@
 		$_SESSION['logged_in'] = false;
 	}
 
+
 	if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['changeNavbar']))
   {
     $_SESSION['logged_in'] = false;
   }
-
+  if(isset($_POST['submitsearchio']))
+  {
+  	$name=$_POST['searchio'];
+  	header('Location: search.html?name='.$name."&location=&type=2");
+  }
 
 	if ($_SESSION['logged_in'] == false) {
 
@@ -27,9 +32,9 @@
   		<div class="collapse navbar-collapse" id="navbarSupportedContent">
   		  <ul class="navbar-nav mr-auto">
   		    <li class="nav-item active">
-						<form class="form-inline my-2 my-lg-0" action="./search.html">
-		    		  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-		    		  	<button id="search-button" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+						<form class="form-inline my-2 my-lg-0" action="" method="POST">
+		    		  <input class="form-control mr-sm-2" type="text" name="searchio" placeholder="Search" aria-label="Search">
+		    		  	<button id="search-button" name="submitsearchio" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 		    		</form>
   		    </li>
   		  </ul>
@@ -59,9 +64,9 @@
   		<div class="collapse navbar-collapse" id="navbarSupportedContent">
   		  <ul class="navbar-nav mr-auto">
   		    <li class="nav-item active">
-						<form class="form-inline my-2 my-lg-0" action="./search.html">
-		    		  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-		    		  	<button id="search-button" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+						<form class="form-inline my-2 my-lg-0" action="" method="POST">
+		    		  <input class="form-control mr-sm-2" type="text" name="searchio" placeholder="Search" aria-label="Search">
+		    		  	<button id="search-button" name="submitsearchio" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 		    		</form>
   		    </li>
   		  </ul>
@@ -82,5 +87,4 @@
   		</div>
 		</nav>';
 }
-
 ?>
