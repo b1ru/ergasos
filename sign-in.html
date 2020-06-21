@@ -21,7 +21,6 @@
 			$hashed_password=$row['password'];
 			if ( mysqli_num_rows ( $result )>=1 AND password_verify($password, $hashed_password)) {
 				session_start();
-				$row=mysqli_fetch_assoc($result);
 				$_SESSION['id']=$row['userID'];
 				mysqli_close($con);	
 			    header('Location: index.html');
