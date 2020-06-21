@@ -2,8 +2,8 @@ function getCard (button) {
   return button.parentNode.parentNode.parentNode;
 }
 
-function getCardTitle(card) {
-  return card.getElementsByClassName('card-title')[0].innerHTML;
+function getCardID(card) {
+  return card.getElementsByClassName('card-header')[0].id;
 }
 
 $('#myModal').on('shown.bs.modal', function (e) {
@@ -12,10 +12,8 @@ $('#myModal').on('shown.bs.modal', function (e) {
     if (card == null) {
       return;
     }
-    var title = getCardTitle(card);
-    console.log(title);
-    document.getElementById('listingname').value = title;
-
+    var id = getCardID(card);
+    document.getElementById('listingID').value = id;
   });
 });
 
