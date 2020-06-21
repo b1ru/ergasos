@@ -52,16 +52,16 @@
 			$sql = "SELECT * FROM listing_details";
 		}
 		elseif ($name!='' && $location!='') {
-			$sql = "SELECT * FROM listing_details WHERE title LIKE  '%$name%' AND city LIKE  '%$location%'";
+			$sql = "SELECT * FROM listing_details WHERE (title LIKE  '%$name%' OR tags LIKE '%$name%') AND city LIKE  '%$location%'";
 		}
 		elseif ($name!='' && $location=='') {
-			$sql = "SELECT * FROM listing_details WHERE title LIKE  '%$name%'";
+			$sql = "SELECT * FROM listing_details WHERE (title LIKE  '%$name%' OR tags LIKE '%$name%')";
 		}
 		elseif ($name=='' && $location!='') {
 			$sql = "SELECT * FROM listing_details WHERE city LIKE '%$location%'";
 		}
 		if ($name!='' && $location!='' && $type!=2){
-			$sql=$sql." AND full_time=$type";
+			$sql=$sql." AND full_time=$type ";
 		}
 		$r_query = mysqli_query($con,$sql); 
 		$q_results= mysqli_num_rows($r_query);
@@ -72,7 +72,7 @@
                 <div class="container">
 					<section id="main">
 						<?php echo '<a id="aggelia" href="./aggelia.html?id='.$row['listingID'].'">';?> <?php echo $row['title']; ?> </a>
-						<p style="margin-bottom: 0px" id="etaireia"> <?php echo $row['creator']; ?> </p>
+						<?php echo '<a id="etairia" href="./company_listings.html?name='.$row['creator'].'">';?> <?php echo $row['creator']; ?> </a>
 						<p id="location">
 							<?php echo $row['city']; ?>
 							<?php echo $row['country']; ?>
