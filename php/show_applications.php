@@ -15,12 +15,16 @@
   WHERE applications.userID = '$id'";
   $result = mysqli_query($con,$query);
   $num = mysqli_num_rows($result);
+  if($num==0){
+    echo '<h1> <br><br>You have not applied for any jobs yet. Get started by searching for some! </h1>';
+  }
+  else{
   for($i = 0; $i < $num; $i++){
     $row = mysqli_fetch_row($result);
 
     echo '<div class="card">
-      <div class="card-header" id="'.$row[2].'">
-        Application #'.($i+1).'
+      <div class="card-header" id="app'.($i+1).'">
+        Application '.($i+1).'
       </div>
       <div class="card-body">
         <h5 class="card-title">'.$row[0].'</h5>
@@ -35,4 +39,5 @@
     </div>';
 
   }
+}
  ?>
