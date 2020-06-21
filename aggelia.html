@@ -24,9 +24,8 @@
 		$query="SELECT * FROM listing_details WHERE listingID=$id";
 		$result=mysqli_query($con,$query);
 		$row = mysqli_fetch_assoc($result);
-		mysqli_free_result($result);
-		mysqli_close($con);
 
+		if(mysqli_num_rows ( $result )>=1){
 		?>
 
 		<div class="box2"><br>
@@ -46,7 +45,13 @@
 			</p>
 			<?php
 			$con = mysqli_connect("localhost","root","","ergasos");
+			if(isset($_SESSION['id'])){
 			$userID=$_SESSION['id'];
+			}
+			else
+			{
+				$userID=0;
+			}
 			$query1="SELECT * FROM applications WHERE listingID='$id' AND userID='$userID'";
 			$result1=mysqli_query($con,$query1);
 			$query2="SELECT * FROM listings WHERE listingID='$id' AND userID='$userID'";
@@ -59,7 +64,7 @@
 				<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter" disabled>
   				This is a listing you've created!
 			</button>
-			<?php } elseif(isset($_SESSION['id'])){?>
+			<?php } elseif($userID!=0){?>
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
   				Apply Now!
 			</button>
@@ -93,6 +98,11 @@
 	</div>
 	<div class="bgcol"></style>
 	</div>
+	<?php }else{?>
+		<br>
+		<p class="Titlos"> Oops, looks like this page doesn't exist!</p>
+		<span class="category">You can maybe create it if you post a listing. No promises that you'll get this url though!</span><br>
+	<?php }?>
 	<!-- Footer -->
 	<footer>
 		<a class="footer-link" href="./contact.html">Contact Us</a>
