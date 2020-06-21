@@ -92,6 +92,19 @@ CREATE TABLE `login` (
   `password` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact_forms`
+--
+
+CREATE TABLE `contact_forms` (
+  `id` int(10) NOT NULL,
+  `messages` varchar(1500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
 --
 -- Indexes for dumped tables
 --
@@ -159,6 +172,18 @@ ALTER TABLE `listing_details`
 --
 ALTER TABLE `login`
   MODIFY `userID` int(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- Indexes for table `contact_forms`
+--
+ALTER TABLE `contact_forms`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for table `contact_forms`
+--
+ALTER TABLE `contact_forms`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
