@@ -23,7 +23,7 @@
     $row = mysqli_fetch_row($result);
 
     echo '<div class="card">
-      <div class="card-header" id="app'.($i+1).'">
+      <div class="card-header" id="'.$row[2].'">
         Application #'.($i+1).'
       </div>
       <div class="card-body">
