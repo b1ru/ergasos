@@ -9,16 +9,16 @@
 
 		<div class="maincontainer">
 			<div class="content">
-
+				
 		<!-- NAVIGATION BAR -->
 		<?php require("php/navbar.php"); ?>
 
-		<?php
+		<?php 
 		$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 		if (is_null($id)) {
-		}
+		} 
 		else if (false === $id) {
-
+		    
 		}
 		$con = mysqli_connect("localhost","root","","ergasos");
 		$query="SELECT * FROM listing_details WHERE listingID=$id";
@@ -44,9 +44,15 @@
 				<span class="category">Description:</span> <?php echo $row["description"];?>
 				</span>
 			</p>
+			<?php if(isset($_SESSION['id'])){?>
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
   				Apply Now!
 			</button>
+			<?php }else{?>
+			<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter" disabled>
+  				Sign in to apply for this job!
+			</button>
+			<?php }?>
 		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 		  <div class="modal-dialog modal-dialog-centered" role="document">
 		    <div class="modal-content">
@@ -63,8 +69,8 @@
 		        	<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
 		        	<form action="php/listing_apply.php" method="post">
 		        		<?php $_SESSION['applyID']=$id;?>
-		        		<input type="submit" class="btn btn-primary" value="Submit">
-					</form>
+		        		<input class="btn btn-primary" type="submit" value="Submit">
+					</form> 
 			      </div>
 			    </div>
 			  </div>
