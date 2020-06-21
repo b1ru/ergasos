@@ -15,11 +15,16 @@
 
 		<?php 
 		$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
-		if (is_null($id)) {
+		if (is_null($id)) {?>
+			<br>
+			<p class="Titlos"> Oops, looks like this page doesn't exist!</p>
+			<span class="category">You can maybe create it if you post a listing. No promises that you'll get this url though!</span><br>
+		<?php
 		} 
 		else if (false === $id) {
 		    
 		}
+		else{
 		$con = mysqli_connect("localhost","root","","ergasos");
 		$query="SELECT * FROM listing_details WHERE listingID=$id";
 		$result=mysqli_query($con,$query);
@@ -102,7 +107,7 @@
 		<br>
 		<p class="Titlos"> Oops, looks like this page doesn't exist!</p>
 		<span class="category">You can maybe create it if you post a listing. No promises that you'll get this url though!</span><br>
-	<?php }?>
+	<?php }}?>
 	<!-- Footer -->
 	<footer>
 		<a class="footer-link" href="./contact.html">Contact Us</a>
