@@ -15,5 +15,13 @@
   $query = "DELETE FROM account_details WHERE userID = '$id'";
   mysqli_query($con,$query);
 
+  $query = "DELETE FROM applications WHERE userID = '$id'";
+  mysqli_query($con,$query);
+
+  $query = "DELETE listings,listing_details FROM
+  listings INNER JOIN listing_details ON listings.listingID= listing_details.listingID
+  WHERE listings.userID = '$id'";
+  mysqli_query($con,$query);
+
   require("logout.php");
 ?>
