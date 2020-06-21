@@ -20,7 +20,7 @@
 
     echo '<div class="card">
       <div class="card-header" id="app'.($i+1).'">
-        Application '.($i+1).'
+        Application #'.($i+1).'
       </div>
       <div class="card-body">
         <h5 class="card-title">'.$row[0].'</h5>
