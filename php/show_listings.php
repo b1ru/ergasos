@@ -26,7 +26,7 @@ for($i = 0; $i < $num; $i++){
   $row = mysqli_fetch_row($result);
 
   echo '<div class="card">
-    <div class="card-header" id="listing'.($i+1).'">
+    <div class="card-header" id="'.$row[2].'">
       Listing #'.($i+1).'
     </div>
     <div class="card-body">
