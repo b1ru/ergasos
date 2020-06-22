@@ -14,7 +14,7 @@
   $passwordquery = "SELECT password FROM login WHERE userID = '$id'";
   $results = mysqli_query($con,$passwordquery);
   $row = mysqli_fetch_row($results);
-  if($row[0] == $currentpassword){
+  if(password_verify($currentpassword, $row[0])){
     $changeusername = "UPDATE login SET username='$newusername' WHERE userID = '$id'";
     if (mysqli_query($con,$changeusername)) {
       setcookie('username_change_success','true',time() + 10,'/');
