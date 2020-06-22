@@ -68,9 +68,11 @@
 				}
 				$_SESSION['logged_in'] = true;
 				$_SESSION['id'] = $last_id;
+				setcookie("successful_register","true",time() + 10,"/");
 			    header('Location: index.html');
 			} else{
-			    echo 'query error'.mysqli_error($con);
+			    setcookie("successful_register","false",time() + 10,"/");
+			    header('Location: index.html');
 			}		
 		}
 	}
