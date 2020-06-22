@@ -12,10 +12,10 @@ function toggle_layout() {
 		new_div.innerHTML = `
 			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./images/user.svg" alt="user icon"></button>
   	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-  	  <a class="dropdown-item" href="./my_profile.html">Profile</a>
-  	  <a class="dropdown-item" href="./my_applications.html">My Applications</a>
-  	  <a class="dropdown-item" href="./my_listings.html">My Listings</a>
-  	  <a class="dropdown-item" href="./settings.html">Settings</a>
+  	  <a class="dropdown-item" href="./my_profile.php">Profile</a>
+  	  <a class="dropdown-item" href="./my_applications.php">My Applications</a>
+  	  <a class="dropdown-item" href="./my_listings.php">My Listings</a>
+  	  <a class="dropdown-item" href="./settings.php">Settings</a>
 			<div class="dropdown-divider"></div>
   	  <a id="logout-link" class="dropdown-item" href="#">Logout</a>
   	</div>
