@@ -15,16 +15,16 @@
   if(isset($_POST['submitsearchio']))
   {
   	$name=$_POST['searchio'];
-  	header('Location: search.html?name='.$name."&location=&type=2");
+  	header('Location: search.php?name='.$name."&location=&type=2");
   }
 
 	if ($_SESSION['logged_in'] == false) {
 
 		echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a href="./index.html">
+			<a href="./index.php">
 				<img src="images/bottlemsg.png">
 			</a>
-  		<a class="navbar-brand" href="./index.html">ErgaSOS</a>
+  		<a class="navbar-brand" href="./index.php">ErgaSOS</a>
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   		  <span class="navbar-toggler-icon"></span>
   		</button>
@@ -39,10 +39,10 @@
   		    </li>
   		  </ul>
 				<div id="right-buttons">
-					<a id="sign-in-link" href="./sign-in.html">
+					<a id="sign-in-link" href="./sign-in.php">
 						<button id="sign-in-btn" type="button" class="btn btn-success">Sign In</button>
 					</a>
-					<a href="./register.html">
+					<a href="./register.php">
 						<button type="button" id="register-btn"  class="btn btn-success">Join Now</button>
 					</a>
 				</div>
@@ -53,10 +53,10 @@
 	else
 	{
 		echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a href="./index.html">
+			<a href="./index.php">
 				<img src="images/bottlemsg.png">
 			</a>
-  		<a class="navbar-brand" href="./index.html">ErgaSOS</a>
+  		<a class="navbar-brand" href="./index.php">ErgaSOS</a>
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   		  <span class="navbar-toggler-icon"></span>
   		</button>
@@ -73,10 +73,10 @@
 			<div>
 				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./images/user.svg" alt="user icon"></button>
   		<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-  	  	<a class="dropdown-item" href="./my_profile.html">Profile</a>
-  	  	<a class="dropdown-item" href="./my_applications.html">My Applications</a>
-  	  	<a class="dropdown-item" href="./my_listings.html">My Listings</a>
-  	  	<a class="dropdown-item" href="./settings.html">Settings</a>
+  	  	<a class="dropdown-item" href="./my_profile.php">Profile</a>
+  	  	<a class="dropdown-item" href="./my_applications.php">My Applications</a>
+  	  	<a class="dropdown-item" href="./my_listings.php">My Listings</a>
+  	  	<a class="dropdown-item" href="./settings.php">Settings</a>
 				<div class="dropdown-divider"></div>
 
 			<form id="logout-link" action="php/logout.php" method="post" >

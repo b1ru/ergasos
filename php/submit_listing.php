@@ -3,7 +3,7 @@
     session_start();
   }
   if(!isset($_SESSION['id'])){
-    header("Location: ./sign-in.html");
+    header("Location: ./sign-in.php");
   }
   else {
     $id = $_SESSION['id'];
@@ -50,5 +50,5 @@
   else {
     setcookie("listing_submit_success","false",time() + 10,"/");
   }
-  header("Location: ../my_listings.html");
+  header("Location: ../my_listings.php");
 ?>

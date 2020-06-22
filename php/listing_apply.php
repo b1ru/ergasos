@@ -10,7 +10,7 @@
 	$res=mysqli_query ( $con, $dupecheck );
 	if(mysqli_num_rows ( $res )>=1)
 	{
-		header("Location: ../my_applications.html");
+		header("Location: ../my_applications.php");
 	}
 	else
 	{
@@ -24,6 +24,6 @@
 		else {
 			setcookie("application_submit_success","false",time() + 10,"/");
 		}
-			header("Location: ../my_applications.html");
+			header("Location: ../my_applications.php");
 	}
  ?>

@@ -3,7 +3,7 @@
     session_start();
   }
   if(!isset($_SESSION['id'])){
-    header("Location: ./sign-in.html");
+    header("Location: ./sign-in.php");
   }
     $con = mysqli_connect("localhost","root","","ergasos");
 

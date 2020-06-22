@@ -27,7 +27,7 @@ for($i = 0; $i < mysqli_num_rows($result); $i++){
       <p class="card-text">
          '.$row[1].'
       </p>
-      <span class="left"> <a href="./aggelia.html?id='.$row[2].'" class="btn btn-primary">View Details</a> </span>
+      <span class="left"> <a href="./aggelia.php?id='.$row[2].'" class="btn btn-primary">View Details</a> </span>
     </div>
   </div>';
 

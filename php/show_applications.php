@@ -3,7 +3,7 @@
     session_start();
   }
   if(!isset($_SESSION['id'])){
-    header("Location: ./sign-in.html");
+    header("Location: ./sign-in.php");
   }
   else {
     $id = $_SESSION['id'];
@@ -33,7 +33,7 @@
             <li>Posted by: '.$row[1].'</li>
           </ul>
         </p>
-        <span class="left"> <a href="./aggelia.html?id='.$row[2].'" class="btn btn-primary">View Details</a> </span>
+        <span class="left"> <a href="./aggelia.php?id='.$row[2].'" class="btn btn-primary">View Details</a> </span>
         <span class="right"> <button type = "button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Remove application</button> </span>
       </div>
     </div>';
