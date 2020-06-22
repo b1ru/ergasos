@@ -69,10 +69,10 @@
 				$_SESSION['logged_in'] = true;
 				$_SESSION['id'] = $last_id;
 				setcookie("successful_register","true",time() + 10,"/");
-			    header('Location: index.php');
+			    header('Location: my_profile.php');
 			} else{
 			    setcookie("successful_register","false",time() + 10,"/");
-			    header('Location: index.php');
+			    header('Location: my_profile.php');
 			}		
 		}
 	}
