@@ -30,8 +30,7 @@
 }
 .rightside{
 	background-color: #E9ECEF;
-	height:90vh;
-	border-left: 1px solid #343A40;
+	height:100%;
 	padding-left: 5px;
 	margin-left: 50vw;
 	overflow-x: scroll;
@@ -96,7 +95,7 @@ input[type=text], select, textarea {
 footer {
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: 0px;
 	height: 25px;
 	color: #ffffff;
 	padding: 10px 20px;
