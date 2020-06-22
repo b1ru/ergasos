@@ -1,5 +1,6 @@
 <?php 
 	session_start();
+	$ok=1;
 	$applicationid=$_SESSION['applyID'];
 	$userID=$_SESSION['id'];
 	unset($_SESSION['applyID']);
@@ -9,13 +10,12 @@
 	$res=mysqli_query ( $con, $dupecheck );
 	if(mysqli_num_rows ( $res )>=1)
 	{
-		setcookie("application_dupe","true",time() + 10,"/");
 		header("Location: ../my_applications.html");
 	}
 	else
 	{
-		mysqli_query($con,$query);
-		if (mysqli_affected_rows($con) == 0 ) {
+		
+		if (!mysqli_query($con,$query) ) {
 	    	$ok = 0;
 	  	}
 	  	if($ok == 1) {
