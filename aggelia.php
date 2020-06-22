@@ -48,7 +48,7 @@
 				<span style="font-size: 20px;">
 				<span class="category">Description:</span> <?php echo $row["description"];?>
 				</span><br>
-				<span style="font-size: 12px;">
+				<span style="font-size: 16px;">
 				<span class="category">Tagged as:</span><span style="color: blue;"> <?php echo $row["tags"];?></span>
 				</span>
 			</p>
