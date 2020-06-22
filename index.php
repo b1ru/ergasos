@@ -19,7 +19,6 @@
 
 		<!-- NAVIGATION BAR -->
 		<?php require("php/navbar.php"); 
-		include ("php/index_alert.php");
 		?>
 
 		<!-- Jumbotron -->
