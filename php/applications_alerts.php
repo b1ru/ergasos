@@ -39,6 +39,6 @@
       </button>
     </div>';
     }
-    setcookie("application_delete_success","",time() - 3600,'/');    
+    setcookie("application_submit_success","",time() - 3600,'/');    
   }
 ?>
