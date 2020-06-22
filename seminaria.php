@@ -24,20 +24,20 @@
 					<br>
 						<p class="Titlos"> Useful tips for Starting in the Job Market</p><br>
 						<p style="border:3px; border-style:solid; border-radius: 15px; border-color:white; padding: 10px; margin-top:-30px; margin-left:-5px; font-size:20px; background: white;width:95%; ">
-						  <a style="color:#616161">As the job market continues evolving and changing only one thing stays constant. The uncertainty of finding a profession that can be fulfilling and life sustainable. Websites like ours exist in a way to help with that uncertainty and chaos but there’s only so much a website can do. Bellow here you can find crucial information that can help you start out and get your foot in the door of the job market.</a>
+						  <a style="color:#616161">As the job market continues to evolve and change, only one thing remains constant. The uncertainty of finding a profession that can be both fulfilling and sustainable. Our website aims to help with that uncertainty and chaos, but there’s only so much a website can do. Below you can find some crucial information that can help you start out and get your foot in the door of the job market.</a>
 						  <br><br>
 						  <a class="Titlos"> Creating a compelling CV</a><br><br>
-						  <a style="color:#616161">Building an impressive CV is not as easy as a task as it may seem at first glance. Especially for a newly graduate student with not a lot of work experience. Here you can check some web pages with crucial information towards building a strong CV.</a><br><br>
+						  <a style="color:#616161">Building an impressive CV is not as easy a task as it may seem at first glance. For a newly graduated student, with very little work experience, structuring a CV seems quite daunting. Here you can check out some web pages with crucial information regarding building a strong CV.</a><br><br>
 						  <a href="https://www.cv-library.co.uk/career-advice/cv/how-to-write-a-cv-tips/"> Tips for writing one yourself!</a><br><br>
 						  <a href="https://zety.com/blog/how-to-write-a-cv"> Useful templates!</a>
 						  <br><br>
-						  <a class="Titlos"> Acing a Job Interview</a><br><br>
-						  <a style="color:#616161">Should your CV bedazzle your prospect employer you’ll be required to have a job interview soon after. While the thought of being judged and evaluated by another person for some time may be intimidating there are a lot of things you can do yourself beforehand to get ready for it. There are resources online that can help you with that exact inquiry.</a><br><br>
+						  <a class="Titlos"> Acing the Job Interview</a><br><br>
+						  <a style="color:#616161">Should your CV captivate your prospect employer, you will most likely be requested for a job interview soon afterwards. While the thought of being judged and evaluated by another person may seem intimidating at first, there are a lot of things you can do beforehand to get ready for it. These are some resources that can help you with that.</a><br><br>
 						  <a href="https://www.thebalancecareers.com/job-interviews-4161912"> Acing a job Interview!</a><br><br>
 						  <a href="https://www.myfuture.com/career/applying/job-interview-tips"> Lots of info for conduct.</a>
 						  <br><br>
-						  <a class="Titlos"> Continue Educating Yourself</a><br><br>
-						  <a style="color:#616161">In the age of information all kinds of knowledge can prove to be useful in the long run. You can never know where your life will steer itself and it’s always good to have an arsenal of skill. Of course you can find seminars in this page but you should never limit yourself. Look for anything that seems interesting and/or useful.</a><br><br>
+						  <a class="Titlos"> Continue Improving</a><br><br>
+						  <a style="color:#616161">In the modern age of information, all kinds of knowledge can prove useful for your future career. You can never be sure about the road ahead of you,so it's always good to have a full arsenal of skills. While you can find seminars in this page, you should never limit yourself. Always look for anything that seems interesting and/or useful.</a><br><br>
 						  <a href="https://www.semifind.gr/"> Seminars near your area!</a><br><br>
 						  <a href="https://www.skillshare.com/"> Find out and learn new Skills.</a>
 						</p>
