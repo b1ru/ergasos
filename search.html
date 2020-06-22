@@ -50,7 +50,12 @@
 		$location=filter_input(INPUT_GET, 'location');
 		$type=filter_input(INPUT_GET, 'type', FILTER_SANITIZE_SPECIAL_CHARS);
 		if ($name=='' && $location=='') {
-			$sql = "SELECT * FROM listing_details WHERE full_time=$type";
+			if($type!=2){
+				$sql = "SELECT * FROM listing_details WHERE full_time=$type";
+			}
+			else{
+				$sql = "SELECT * FROM listing_details";
+			}
 		}
 		elseif ($name!='' && $location!='') {
 			$sql = "SELECT * FROM listing_details WHERE (title LIKE  '%$name%' OR tags LIKE '%$name%') AND city LIKE  '%$location%'";
