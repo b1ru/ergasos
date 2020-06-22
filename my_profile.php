@@ -94,12 +94,12 @@
       <div>
         <p id="CV">
 					<span class="left">
-						<?php
-						 if($cv!=NULL){?>
-						<a href="php/delete_cv.php"><img src="images/cross.png"></a>
-						<?php }?>
 						<img src="images/CV.png">
 						<a download="CV.pdf" <?php echo $href ?>>Download CV</a>
+						<?php
+						 if($cv!=NULL){?>
+						<br><a href="php/delete_cv.php" style="color: rgb(97, 97, 97);">Remove</a>
+						<?php }?>
 					</span>
 					<span class="right">
 						<img src="images/upload.png">
@@ -110,6 +110,10 @@
 					</span>
 				</p>
     	</div>
+    	<?php
+		 if($cv!=NULL){?>
+		<br>
+		<?php }?>
     </div>
 	</div>
 
