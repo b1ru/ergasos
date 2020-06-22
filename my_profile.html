@@ -93,6 +93,10 @@
       <div>
         <p id="CV">
 					<span class="left">
+						<?php
+						 if($cv!=NULL){?>
+						<a href="php/delete_cv.php"><img src="images/cross.png"></a>
+						<?php }?>
 						<img src="images/CV.png">
 						<a download="CV.pdf" <?php echo $href ?>>Download CV</a>
 					</span>
