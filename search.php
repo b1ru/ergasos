@@ -69,6 +69,7 @@
 		if ($name!='' && $location!='' && $type!=2){
 			$sql=$sql." AND full_time=$type ";
 		}
+		$sql=$sql." ORDER BY listingID DESC ";
 		$r_query = mysqli_query($con,$sql); 
 		$q_results= mysqli_num_rows($r_query);
 		if ($q_results > 0) {
