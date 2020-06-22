@@ -10,6 +10,7 @@
 		}
 		if(empty($_POST['complaint'])){
 			$error=1;
+			setcookie("no_complaint","true",time() + 10,"/");
 		}
 		else{
 			$message="From ".$name.", ".$email.": ".$subject."\n ".$complaint;
@@ -20,8 +21,12 @@
 			$query="INSERT INTO contact_forms (messages) VALUES ('$message')";
 			if(mysqli_query($con, $query)){
 					mysqli_close($con);	
-				    header('Location: index.php');
-				}
+					setcookie("successful_complaint","true",time() + 10,"/");
+			}
+			else{
+				setcookie("successful_complaint","false",time() + 10,"/");
+			}
+			header('Location: contact.php');
 		}
 	}
 	else{
@@ -41,6 +46,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/seminaria.css">
+	<link rel="stylesheet" type="text/css" href="css/main_style.css">
 </head>
 
 <body>
@@ -50,7 +56,12 @@
 			<!-- NAVIGATION BAR -->
 			<?php require("php/navbar.php"); ?>
 
-	<div class="box2"><br>
+		<?php
+			include "php/contact_alerts.php";
+		?>
+	<div class="box2">
+
+			<br>
 		<p style="color:black; font: 28px normal Arial, Helvetica, sans-serif; text-align:center;"> Contact Information</p><br>
 		<p style="border:3px; border-style:solid; border-radius: 15px; border-color:white; padding: 10px; margin-top:-30px; margin-left:-5px; font-size:18px; background: white;width:60%; text-align: center; margin:auto; ">
 			E-mail: ergasos@gmail.com<br>
@@ -88,6 +99,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="./js/change_navbar.js"></script>
+<script type="text/javascript" src="js/main_scripts.js"></script>
+<script type="text/javascript" src="js/my_stuff.js"></script>
 
 </body>
 </html>
