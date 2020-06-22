@@ -18,7 +18,12 @@
 			$query = "SELECT * FROM login WHERE username = '$username'";
 			$result = mysqli_query ( $con, $query );
 			$row = mysqli_fetch_assoc($result);
-			$hashed_password=$row['password'];
+			if(mysqli_num_rows ( $result )>=1){
+				$hashed_password=$row['password'];
+			}
+			else{
+				$hashed_password=NULL;
+			}
 			if ( mysqli_num_rows ( $result )>=1 AND password_verify($password, $hashed_password)) {
 				session_start();
 				$_SESSION['id']=$row['userID'];
