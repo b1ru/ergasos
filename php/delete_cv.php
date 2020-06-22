@@ -9,7 +9,7 @@ session_start();
 	$con = mysqli_connect("localhost","root","","ergasos");
 	$query="UPDATE account_details SET cv=NULL WHERE userID='$id'";
 	if (mysqli_query($con, $query)) {
-		unlink("uploads/cv_".$id);
+		unlink("../uploads/cv_".$id.".pdf");
 		header("Location: {$_SERVER["HTTP_REFERER"]}");
 	} 
 	else {
