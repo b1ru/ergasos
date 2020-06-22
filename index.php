@@ -12,6 +12,7 @@
 		<title>Ergasos</title>
 
 		<!-- My CSS file -->
+		<link rel="stylesheet" type="text/css" href="css/main_style.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
