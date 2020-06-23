@@ -98,24 +98,53 @@
 	<?php
 			}
 		}
-		$url='https://jobs.github.com/positions.json?description=python&location='.$location;
+			$ignore_fulltime=0;
+			if($type==2){
+				$url='https://jobs.github.com/positions.json?description=python&location='.$location;
+			}
+			elseif($type==1){
+				$url='https://jobs.github.com/positions.json?description=python&full_time=true&location='.$location;
+			}
+			else{
+				$url='https://jobs.github.com/positions.json?description=python&full_time=false&location='.$location;
+				$ignore_fulltime=1;
+			}
 			$json = file_get_contents($url);
 			$data = json_decode($json,true);
 			$j=0;
 			while($j<count($data)){
+				if($name!=''){
+					if(strpos($data[$j]['title'], $name)){if($ignore_fulltime==1 && $data[$j]['type']!="Full Time"){
 			?>
-			<div class="container">
-					<section id="main">
-						<?php echo '<a id="aggelia" href="'.$data[$j]['url'].'">';?> <?php echo $data[$j]['title']; ?> </a>
-						<?php echo '<a id="etairia" href="'.$data[$j]['company_url'].'">';?> <?php echo $data[$j]['company']; ?> </a>
-						<p id="location">
-							<?php echo $data[$j]['location']; ?>
-						</p>
-					</section>
-					<span style="float:right;"><i><br><br><br>Via Github Jobs</i></span>
-				</div>
-			<?php			
-			$j=$j+1;}
+
+					<div class="container">
+						<section id="main">
+							<?php echo '<a id="aggelia" href="'.$data[$j]['url'].'">';?> <?php echo $data[$j]['title']; ?> </a>
+							<?php echo '<a id="etairia" href="'.$data[$j]['company_url'].'">';?> <?php echo $data[$j]['company']; ?> </a>
+							<p id="location">
+								<?php echo $data[$j]['location']; ?>
+							</p>
+						</section>
+						<span style="float:right;"><i><br><br><br>Via Github Jobs</i></span>
+					</div>
+			
+			<?php
+					}}
+				}
+				else{if($ignore_fulltime==1 && $data[$j]['type']!="Full Time"){ ?>
+					<div class="container">
+						<section id="main">
+							<?php echo '<a id="aggelia" href="'.$data[$j]['url'].'">';?> <?php echo $data[$j]['title']; ?> </a>
+							<?php echo '<a id="etairia" href="'.$data[$j]['company_url'].'">';?> <?php echo $data[$j]['company']; ?> </a>
+							<p id="location">
+								<?php echo $data[$j]['location']; ?>
+							</p>
+						</section>
+						<span style="float:right;"><i><br><br><br>Via Github Jobs</i></span>
+					</div><?php
+				}}			
+				$j=$j+1;
+			}
 
 	?>
 	<br><br>
