@@ -30,21 +30,33 @@
 
 		<!-- Jumbotron -->
 		<div class="jumbotron jumbotron-fluid">
-			<div class="container">
-		  	<h1 class="display-4">Find the Best Jobs!</h1>
+			<div class="container-fluid">
+		  	<h1 class="display-4" style="text-align: center;">Find the Best Jobs!</h1>
 				<br>
-				<p>
-					<a class="job-link" href="search.php?name=&location=&type=2">Find a Job</a>
-					<span> - Find your dream job in a matter of seconds</span>
-				</p>
-				<p>
-					<a href="./create_listing.php" class="job-link">Post a Job</a>
-					<span> - Evaluate potential employees and pick the best one for your job opening</span>
-				</p>
-				<p>
-					<a href="./seminaria.php" class="job-link">Seminars</a>
-					<span> - View available seminars near you</span>
-				</p>
+				<br>
+				<div class = "row">
+					<div class = "col">
+						<img style="margin: 0 auto; display: block;" src="images/magnifier.png">
+					</div>
+					<div class = "col">
+						<img  style="margin: 0 auto; display: block;"src="images/fillform.png">
+					</div>
+					<div class = "col">
+						<img style="margin: 0 auto; display: block;" src="images/education.png">
+					</div>
+				</div>
+				<div class = "row justify-content-md-center">
+					<div class = "col text-center">
+						<a class="job-link" href="search.php?name=&location=&type=2">Find a Job - Find your dream job in a matter of seconds</a>
+					</div>
+					<div class = "col text-center">
+						<a href="./create_listing.php" class="job-link">Post a Job - Evaluate potential employees and pick the best one for your job opening</a>
+					</div>
+					<div class = "col text-center">
+						<a href="./seminaria.php" class="job-link">Seminars - View available seminars near you</a>
+					</div>
+				</div>
+			</div>
 				<?php if (isset($_SESSION['id'])){if($_SESSION['id']==1){?>
 				<form action="" method="POST">
 					<a style="color: red">
