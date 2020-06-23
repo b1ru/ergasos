@@ -28,15 +28,10 @@
 
     	$query = "DELETE FROM applications WHERE userID = '$id'";
     	mysqli_query($con,$query);
-    	if (mysqli_affected_rows($con) == 0 ) {
-	      $ok = 0;
-	    }
 
     	$query = "DELETE listing_details,listings FROM listing_details INNER JOIN listings ON listing_details.listingID=listings.listingID WHERE listings.userID = '$id'";
     	mysqli_query($con,$query);
-    	if (mysqli_affected_rows($con) == 0 ) {
-	      $ok = 0;
-	    }
+
 	    if($ok == 1) {
 	      setcookie("user_delete_success","true",time() + 10,"/");
 	    }
