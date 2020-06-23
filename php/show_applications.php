@@ -16,7 +16,7 @@
   $result = mysqli_query($con,$query);
   $num = mysqli_num_rows($result);
   if($num==0){
-    echo '<h1 style="text-align:center"> <br><br>You have not applied for any jobs yet. Get started by searching for some! </h1>';
+    echo '<h3 style="text-align:center"> <br><br> <a href="search.php?name=&location=&type=2">You have not applied for any jobs yet. Get started by searching for some! </a></h3>';
   }
   else{
   for($i = 0; $i < $num; $i++){

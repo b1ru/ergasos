@@ -19,7 +19,7 @@ ORDER BY listing_details.listingID";
 $result = mysqli_query($con,$query);
 $num = mysqli_num_rows($result);
 if($num==0){
-    echo '<h1 style="text-align:center"> <br><br>You have not listed any jobs yet. Get started by creating one! </h1>';
+    echo '<h3 style="text-align:center"> <br><br> <a href="create_listing.php">You have not listed any jobs yet. Get started by creating one! </a></h3>';
   }
 else{
 for($i = 0; $i < $num; $i++){
