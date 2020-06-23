@@ -10,12 +10,26 @@
 		$con = mysqli_connect("localhost","root","","ergasos");
 		$query = "DELETE FROM listing_details WHERE listingID = '$id'";
     	mysqli_query($con,$query);
+    	$ok=1;
+    	if (mysqli_affected_rows($con) == 0 ) {
+	      $ok = 0;
+	    }
     	
     	$query = "DELETE FROM listings WHERE listingID = '$id'";
     	mysqli_query($con,$query);
+    	if (mysqli_affected_rows($con) == 0 ) {
+	      $ok = 0;
+	    }
     	
     	$query = "DELETE FROM applications WHERE listingID = '$id'";
     	mysqli_query($con,$query);
+
+    	if($ok == 1) {
+	      setcookie("listing_delete_success","true",time() + 10,"/");
+	    }
+	    else {
+	      setcookie("listing_delete_success","false",time() + 10,"/");
+	    }
     	header('Location: ../index.php');
 	}
 ?>
