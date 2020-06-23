@@ -33,7 +33,7 @@ for($i = 0; $i < $num; $i++){
       <h5 class="card-title">'.$row[0].'</h5>
       <p class="card-text">
          <ul>
-            <li>Number of applicants: '.$row[1].'</li>
+            <li>Number of applicants: <a type="button" href="#" id="applicantstoggle" data-toggle="modal" data-target="#applicantsModal">'.$row[1].'</a></li>
         </ul>
       </p>
       <span class="left"> <a href="./aggelia.php?id='.$row[2].'" class="btn btn-primary">View Details</a> </span>

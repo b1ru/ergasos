@@ -7,3 +7,7 @@
   width: 100%;
   background-color: #eee;
 }
+
+th, td {
+  padding: 30px;
+}

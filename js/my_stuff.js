@@ -20,3 +20,12 @@ $('#myModal').on('shown.bs.modal', function (e) {
 $('#myModal').on('hidden.bs.modal', function () {
   $('#confirmbtn').off('click');
 });
+
+$("#applicantsModal").on('shown.bs.modal', function(e){
+  var card = getCard(e.relatedTarget).parentNode;
+  if (card == null) {
+    return;
+  }
+  var id = getCardID(card);
+  $("#applicants").load("php/generate_applicants.php",{listingid : id});
+});
