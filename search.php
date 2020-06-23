@@ -31,24 +31,26 @@
 	<!-- NAVIGATION BAR -->
 	<?php require("php/navbar.php"); ?>
 
+	<?php 
+		$name=filter_input(INPUT_GET, 'name');
+		$location=filter_input(INPUT_GET, 'location');
+		$type=filter_input(INPUT_GET, 'type', FILTER_SANITIZE_SPECIAL_CHARS);
+	?>
 	<div id="search">
 		<form method="post"> 
 			<label>Job Type</label>
 					<select class="form" name="jobType">
-						<option value="2">Both</option>
-						<option value="1">Full Time</option>>
-						<option value="0">Part Time</option>>
+						<option value="2" <?php if ($type==2) {echo "selected";} ?>>Both</option>
+						<option value="1" <?php if ($type==1) {echo "selected";} ?>>Full Time</option>>
+						<option value="0" <?php if ($type==0) {echo "selected";} ?>>Part Time</option>>
 					</select>
-					<input type="text" name="name" placeholder="Search..">
-					<input type="text" name="location" placeholder="Location..">
+					<input type="text" name="name" placeholder="Search.." value="<?php echo $name ?>">
+					<input type="text" name="location" placeholder="Location.." value="<?php echo $location ?>">
 					<input type="submit" name="search-button" value="Search">
 		</form>
 	</div>	
 
 	<?php
-		$name=filter_input(INPUT_GET, 'name');
-		$location=filter_input(INPUT_GET, 'location');
-		$type=filter_input(INPUT_GET, 'type', FILTER_SANITIZE_SPECIAL_CHARS);
 		if ($name=='' && $location=='') {
 			if($type!=2){
 				$sql = "SELECT * FROM listing_details WHERE full_time=$type";
