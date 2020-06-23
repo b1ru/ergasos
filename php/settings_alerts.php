@@ -42,4 +42,17 @@
     }
     setcookie("password_change_success","",time() - 3600,'/');
   }
+
+  if(isset($_COOKIE['username_taken'])) {
+    if($_COOKIE['username_taken'] == 'true') {
+      echo '<!-- ALERT -->
+      <div class="alert alert-danger fade" role="alert">
+      <strong>Username already taken.</strong>
+      <button type="button" class="close closeAlertBtn" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>';
+    }
+    setcookie('username_taken',"",time() - 3600,'/');
+  }
 ?>
