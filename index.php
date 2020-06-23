@@ -1,3 +1,10 @@
+<?php
+	if (isset($_POST['delete_user']))
+	{
+		header('location: php/delete_user.php?username='.$_POST['usenramedelete']);
+	}
+?>
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -38,8 +45,15 @@
 					<a href="./seminaria.php" class="job-link">Seminars</a>
 					<span> - View available seminars near you</span>
 				</p>
+				<?php if (isset($_SESSION['id'])){if($_SESSION['id']==1){?>
+				<form action="" method="POST">
+					<a style="color: red">
+					<label> Delete user (Admin only Option):</label></a>
+					<input type="text" name="usenramedelete" placeholder="username">
+					<input class="button" type="submit" name="delete_user" value="Delete">
+				</form>
+				<?php }}?>
 			</div>
-
 			<!-- Footer -->
 			<footer>
 				<a class="footer-link" href="./contact.php">Contact Us</a><a href="https://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tourhttps://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tour" style="padding-left: 5px"><i class="fa fa-facebook-f" style="font-size:20px"></i></a>
