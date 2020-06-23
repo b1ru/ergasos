@@ -50,6 +50,7 @@
 				</span><br>
 				<span style="font-size: 16px;">
 				<span class="category">Tagged as:</span><span style="color: blue;"> <?php echo $row["tags"];?></span>
+				<?php if (isset($_SESSION['id'])){if($_SESSION['id']==1){ echo'<br><a style="color: red; font-size:20px;" href="php/delete_listing_admin.php?id='.$id.'"> Delete this listing!(Admin only option)</a>';}}?>
 				</span>
 			</p>
 			<?php
