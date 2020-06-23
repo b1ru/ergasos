@@ -30,7 +30,7 @@
         <h5 class="card-title">'.$row[0].'</h5>
         <p class="card-text">
           <ul>
-            <li>Posted by: '.$row[1].'</li>
+            <li>Posted by: <a href="company_listings.php?name='.$row[1].'">'.$row[1].'</li>
           </ul>
         </p>
         <span class="left"> <a href="./aggelia.php?id='.$row[2].'" class="btn btn-primary">View Details</a> </span>
