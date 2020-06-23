@@ -105,7 +105,7 @@
 			elseif($type==1){
 				$url='https://jobs.github.com/positions.json?description=python&full_time=true&location='.$location;
 			}
-			else{
+			elseif($type==0){
 				$url='https://jobs.github.com/positions.json?description=python&full_time=false&location='.$location;
 				$ignore_fulltime=1;
 			}
@@ -114,7 +114,7 @@
 			$j=0;
 			while($j<count($data)){
 				if($name!=''){
-					if(strpos($data[$j]['title'], $name)){if($ignore_fulltime==1 && $data[$j]['type']!="Full Time"){
+					if(stripos($data[$j]['title'], $name)!==false){if($ignore_fulltime==1 && $data[$j]['type']=="Full Time"){$j=$j+1; continue;}
 			?>
 
 					<div class="container">
@@ -129,9 +129,9 @@
 					</div>
 			
 			<?php
-					}}
+					}
 				}
-				else{if($ignore_fulltime==1 && $data[$j]['type']!="Full Time"){ ?>
+				else{if($ignore_fulltime==1 && $data[$j]['type']=="Full Time"){$j=$j+1; continue;}?>
 					<div class="container">
 						<section id="main">
 							<?php echo '<a id="aggelia" href="'.$data[$j]['url'].'">';?> <?php echo $data[$j]['title']; ?> </a>
@@ -142,7 +142,7 @@
 						</section>
 						<span style="float:right;"><i><br><br><br>Via Github Jobs</i></span>
 					</div><?php
-				}}			
+				}			
 				$j=$j+1;
 			}
 
