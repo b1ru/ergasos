@@ -15,6 +15,7 @@ if(mysqli_num_rows($result)==0){
     echo '<h1 style="text-align:center"> <br><br> This company has no listings. </h1>';
   }
 else{
+echo "<h2>".$name."'s Listings</h2><br>";
 for($i = 0; $i < mysqli_num_rows($result); $i++){
   $row = mysqli_fetch_row($result);
 
