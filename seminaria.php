@@ -47,11 +47,11 @@
 		</div>
 		<div class="col-3 no-gutters">
 			<div class="rightside">
-				<h1>Useful Pages</h1>
-				<div class="fb-page" data-href="https://www.facebook.com/authelke" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/authelke" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/authelke">Cap&#039;n Ειδικός Λογαριασμός Κονδυλίων Έρευνας ΑΠΘ</a></blockquote></div>
+				<h1 style = "text-align: center">Useful Pages</h1>
+				<div class="fb-page" data-href="https://www.facebook.com/authelke" data-tabs="timeline" data-width="500"  data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/authelke" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/authelke">Cap&#039;n Ειδικός Λογαριασμός Κονδυλίων Έρευνας ΑΠΘ</a></blockquote></div>
 				<br>
-				<div class="fb-page" data-href="https://www.facebook.com/semifind/" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/semifind/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/semifind/">Cap&#039;n Semifind.gr - Education Portal</a></blockquote></div>
-      		</div>
+				<div class="fb-page" data-href="https://www.facebook.com/semifind/" data-tabs="timeline" data-width="500"  data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/semifind/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/semifind/">Cap&#039;n Semifind.gr - Education Portal</a></blockquote></div>
+      </div>
 		</div>
 	</div>
 </div>
@@ -65,6 +65,5 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<script src="js/seminaria.js"></script>
 </body>
 </html>
