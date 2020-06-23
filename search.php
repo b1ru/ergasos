@@ -71,9 +71,10 @@
 		if ($name!='' && $location!='' && $type!=2){
 			$sql=$sql." AND full_time=$type ";
 		}
-		$sql=$sql." ORDER BY listingID DESC ";
+		$sql=$sql." ORDER BY date_added DESC ";
 		$r_query = mysqli_query($con,$sql);
 		$q_results= mysqli_num_rows($r_query);
+
 		if ($q_results > 0) {
 			while ($row = mysqli_fetch_assoc($r_query)){
 			?>
@@ -95,8 +96,27 @@
 				</div>
 
 	<?php
-				}
 			}
+		}
+		$url='https://jobs.github.com/positions.json?description=python&location='.$location;
+			$json = file_get_contents($url);
+			$data = json_decode($json,true);
+			$j=0;
+			while($j<count($data)){
+			?>
+			<div class="container">
+					<section id="main">
+						<?php echo '<a id="aggelia" href="'.$data[$j]['url'].'">';?> <?php echo $data[$j]['title']; ?> </a>
+						<?php echo '<a id="etairia" href="'.$data[$j]['company_url'].'">';?> <?php echo $data[$j]['company']; ?> </a>
+						<p id="location">
+							<?php echo $data[$j]['location']; ?>
+						</p>
+					</section>
+					<span style="float:right;"><i><br><br><br>Via Github Jobs</i></span>
+				</div>
+			<?php			
+			$j=$j+1;}
+
 	?>
 	<br><br>
 			<!-- Footer -->
