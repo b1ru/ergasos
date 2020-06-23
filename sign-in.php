@@ -1,4 +1,4 @@
-<?php 
+<?php
 	$con = mysqli_connect("localhost","root","","ergasos");
 	if($con === false){
 		die("ERROR: Could not connect. " . mysqli_connect_error());
@@ -27,9 +27,9 @@
 			if ( mysqli_num_rows ( $result )>=1 AND password_verify($password, $hashed_password)) {
 				session_start();
 				$_SESSION['id']=$row['userID'];
-				mysqli_close($con);	
+				mysqli_close($con);
 			    header('Location: index.php');
-					
+
 					// change navbar
 					$_SESSION['logged_in'] = true;
 			}
@@ -90,7 +90,7 @@
 
 			<!-- Footer -->
 			<footer>
-				<a class="footer-link" href="./contact.php">Contact Us</a><a href="https://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tourhttps://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tour" style="padding-left: 5px"><i class="fa fa-facebook-f" style="font-size:20px"></i></a>
+				<div style="float: left"><a class="footer-link" href="./contact.php">Contact Us</a> </div> <div style="position: absolute; right:30px"><a href="https://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tourhttps://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tour" style="padding-left: 5px"><i class="fa fa-facebook-f" style="font-size:20px"></i></a> </div>
 			</footer>
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->

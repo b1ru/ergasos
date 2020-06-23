@@ -10,20 +10,20 @@
 
 		<div class="maincontainer">
 			<div class="content">
-				
+
 		<!-- NAVIGATION BAR -->
 		<?php require("php/navbar.php"); ?>
 
-		<?php 
+		<?php
 		$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 		if (is_null($id)) {?>
 			<br>
 			<p class="Titlos"> Oops, looks like this page doesn't exist!</p>
 			<span class="category">You can maybe create it if you post a listing. No promises that you'll get this url though!</span><br>
 		<?php
-		} 
+		}
 		else if (false === $id) {
-		    
+
 		}
 		else{
 		$con = mysqli_connect("localhost","root","","ergasos");
@@ -100,7 +100,7 @@
 		        	<form action="php/listing_apply.php" method="post">
 		        		<?php $_SESSION['applyID']=$id;?>
 		        		<input class="btn btn-primary" type="submit" value="Submit">
-					</form> 
+					</form>
 			      </div>
 			    </div>
 			  </div>
@@ -115,7 +115,7 @@
 	<?php }}?>
 	<!-- Footer -->
 	<footer>
-		<a class="footer-link" href="./contact.php">Contact Us</a><a href="https://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tourhttps://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tour" style="padding-left: 5px"><i class="fa fa-facebook-f" style="font-size:20px"></i></a>
+		<div style="float: left"><a class="footer-link" href="./contact.php">Contact Us</a> </div> <div style="position: absolute; right:30px"><a href="https://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tourhttps://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tour" style="padding-left: 5px"><i class="fa fa-facebook-f" style="font-size:20px"></i></a> </div>
 	</footer>
 </div>
 </body>

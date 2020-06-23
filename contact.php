@@ -1,4 +1,4 @@
-<?php 
+<?php
 	if(isset($_POST['submit'])){
 		$error=0;
 		$name=$_POST['firstname'];
@@ -20,7 +20,7 @@
 			}
 			$query="INSERT INTO contact_forms (messages) VALUES ('$message')";
 			if(mysqli_query($con, $query)){
-					mysqli_close($con);	
+					mysqli_close($con);
 					setcookie("successful_complaint","true",time() + 10,"/");
 			}
 			else{
@@ -69,7 +69,7 @@
 			Website developed by: <ul style="border:3px; border-style:solid; border-radius: 15px; border-color:white; padding: 10px; margin-top:-30px; margin-left:-5px; font-size:18px; background: white;width:60%; margin:0 auto; margin-top:-25px; list-style: inside; display: table; padding-left: 23.5%"><li>Andreas Skolidis</li><li>Axilleas Toumpas</li><li>Basilis Tsekouras</li><li>Nikos Tsioumanis</li></ul>
 		</p>
 		<p style="color:black; font: 28px normal Arial, Helvetica, sans-serif; text-align:center;"> Contact Us</p>
-		
+
 		<form action="" method="POST">
 		<p style="border:3px; border-style:solid; border-radius: 15px; border-color:white; padding: 10px; margin-top:-30px; margin-left:-5px; font-size:18px; background: white;width:60%; text-align: left; margin:auto; ">
 			<label for="fname">First Name</label>
@@ -91,7 +91,7 @@
 
 	<!-- Footer -->
 	<footer>
-		<a class="footer-link" href="./contact.php">Contact Us</a><a href="https://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tourhttps://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tour" style="padding-left: 5px"><i class="fa fa-facebook-f" style="font-size:20px"></i></a>
+		<div style="float: left"><a class="footer-link" href="./contact.php">Contact Us</a> </div> <div style="position: absolute; right:30px"><a href="https://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tourhttps://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tour" style="padding-left: 5px"><i class="fa fa-facebook-f" style="font-size:20px"></i></a> </div>
 	</footer>
 </div>
 

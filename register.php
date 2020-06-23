@@ -1,4 +1,4 @@
-<?php 
+<?php
 	$con = mysqli_connect("localhost","root","","ergasos");
 	if($con === false){
 	die("ERROR: Could not connect. " . mysqli_connect_error());
@@ -33,7 +33,7 @@
 			if ( mysqli_num_rows ( $result )>=1 ) {
 				$errors['username']="Username already taken";
 			}
-		} 
+		}
 		if(empty($password = $_POST['password'])){
 			$errors['password']="Please insert a password";
 		}
@@ -73,7 +73,7 @@
 			} else{
 			    setcookie("successful_register","false",time() + 10,"/");
 			    header('Location: my_profile.php');
-			}		
+			}
 		}
 	}
 	else{
@@ -109,7 +109,7 @@
 				<label>First Name:</label>
 				<input class="form" type="text" name="firstName" placeholder="Enter first name" value="<?php echo $fname ?>">
 			</div>
-			<p style="color:red; margin-bottom: 0px;"><?php echo $errors['fname'];?></p>	
+			<p style="color:red; margin-bottom: 0px;"><?php echo $errors['fname'];?></p>
 
 			<div class="p">
 				<label>Last Name:</label>
@@ -149,10 +149,10 @@
 		<a href="./sign-in.php">Sign In</a>
 		</div>
 	</div>
-	
+
 			<!-- Footer -->
 			<footer>
-				<a class="footer-link" href="./contact.php">Contact Us</a><a href="https://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tourhttps://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tour" style="padding-left: 5px"><i class="fa fa-facebook-f" style="font-size:20px"></i></a>
+				<div style="float: left"><a class="footer-link" href="./contact.php">Contact Us</a> </div> <div style="position: absolute; right:30px"><a href="https://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tourhttps://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tour" style="padding-left: 5px"><i class="fa fa-facebook-f" style="font-size:20px"></i></a> </div>
 			</footer>
 
 			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -31,13 +31,13 @@
 	<!-- NAVIGATION BAR -->
 	<?php require("php/navbar.php"); ?>
 
-	<?php 
+	<?php
 		$name=filter_input(INPUT_GET, 'name');
 		$location=filter_input(INPUT_GET, 'location');
 		$type=filter_input(INPUT_GET, 'type', FILTER_SANITIZE_SPECIAL_CHARS);
 	?>
 	<div id="search">
-		<form method="post"> 
+		<form method="post">
 			<label>Job Type</label>
 					<select class="form" name="jobType">
 						<option value="2" <?php if ($type==2) {echo "selected";} ?>>Both</option>
@@ -48,7 +48,7 @@
 					<input type="text" name="location" placeholder="Location.." value="<?php echo $location ?>">
 					<input type="submit" name="search-button" value="Search">
 		</form>
-	</div>	
+	</div>
 
 	<?php
 		if ($name=='' && $location=='') {
@@ -72,12 +72,12 @@
 			$sql=$sql." AND full_time=$type ";
 		}
 		$sql=$sql." ORDER BY listingID DESC ";
-		$r_query = mysqli_query($con,$sql); 
+		$r_query = mysqli_query($con,$sql);
 		$q_results= mysqli_num_rows($r_query);
 		if ($q_results > 0) {
-			while ($row = mysqli_fetch_assoc($r_query)){  
+			while ($row = mysqli_fetch_assoc($r_query)){
 			?>
-                 
+
                 <div class="container">
 					<section id="main">
 						<?php echo '<a id="aggelia" href="./aggelia.php?id='.$row['listingID'].'">';?> <?php echo $row['title']; ?> </a>
@@ -101,7 +101,7 @@
 	<br><br>
 			<!-- Footer -->
 			<footer>
-				<a class="footer-link" href="./contact.php">Contact Us</a><a href="https://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tourhttps://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tour" style="padding-left: 5px"><i class="fa fa-facebook-f" style="font-size:20px"></i></a>
+				<div style="float: left"><a class="footer-link" href="./contact.php">Contact Us</a> </div> <div style="position: absolute; right:30px"><a href="https://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tourhttps://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tour" style="padding-left: 5px"><i class="fa fa-facebook-f" style="font-size:20px"></i></a> </div>
 			</footer>
 
 

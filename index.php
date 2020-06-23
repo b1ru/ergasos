@@ -25,7 +25,7 @@
 	<body>
 
 		<!-- NAVIGATION BAR -->
-		<?php require("php/navbar.php"); 
+		<?php require("php/navbar.php");
 		?>
 
 		<!-- Jumbotron -->
@@ -56,7 +56,7 @@
 			</div>
 			<!-- Footer -->
 			<footer>
-				<a class="footer-link" href="./contact.php">Contact Us</a><a href="https://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tourhttps://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tour" style="padding-left: 5px"><i class="fa fa-facebook-f" style="font-size:20px"></i></a>
+				<div style="float: left"><a class="footer-link" href="./contact.php">Contact Us</a> </div> <div style="position: absolute; right:30px"><a href="https://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tourhttps://www.facebook.com/Ergasos-107559361009649/?modal=admin_todo_tour" style="padding-left: 5px"><i class="fa fa-facebook-f" style="font-size:20px"></i></a> </div>
 			</footer>
 		</div>
 
