@@ -30,7 +30,7 @@
 }
 .rightside{
 	background-color: #E9ECEF;
-	height: 100vh;
+	height: 100%;
 	padding-left: 5px;
 	margin-left: 50vw;
 	overflow-x: scroll;
